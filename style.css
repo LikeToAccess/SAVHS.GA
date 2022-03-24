@@ -57,7 +57,7 @@ p {
 }
 
 .grey {
-  color:#737373;
+  color:#737373 !important;
 }
 
 .card-icon {
