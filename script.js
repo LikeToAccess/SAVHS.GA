@@ -23,3 +23,14 @@ function sortList() {
 		}
 	}
 }
+
+fetch("lunch/logs/LD_2022-03-29.json")
+	.then(function (response) {
+		return response.json();
+	})
+	.then(function (data) {
+		appendData(data);
+	})
+	.catch(function (err) {
+		console.log(err);
+	});
