@@ -1,15 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Today's Lunch</title>
-	<script src="../script.js"></script>
-</head>
-<body>
-	<h1>LUNCH</h1><p><!-- BEGIN INSERT -->LUNCH<!-- END INSERT --></p>
-	<div id="lunch">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+	<title>LUNCH.SAVHS.GA</title>
+	<link rel="icon" type="image/x-icon" href="../favicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="../style.css">
+	<script src="https://kit.fontawesome.com/eb5d4c9168.js" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+	<title>Today's Lunch</title>
+	<script type="text/javascript" src="logs/LD_TEST.json"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+
+<body onload="loadJSON()" translate="no">
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<!-- Brand/logo -->
+		<a class="navbar-brand" href="../">
+			<img class="rounded" src="../huskies_logo.png" alt="logo" style="width:40px;">
+		</a>
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="../"><i class="fas fa-list"></i> Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href><i class="fas fa-burger"></i> Today's Lunch</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled grey" target="_blank"><i class="fas fa-link"></i> Link</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled grey" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://github.com/LikeToAccess/LMB" target="_blank"><i class="fab fa-github"></i> Github</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled grey" target="_blank"><i class="fas fa-sign-in-alt"></i> Dashboard</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div class="container-fluid cont">
+	<br/>
+	<h1 style="text-align:center;">About LUNCH.SAVHS.GA</h1>
+	<br/>
+	<div class="container text-center">
+		<p>Lunch Menu Bot! The data below is just a sample and not currently up to date. To view the current lunch schedule produced by the bot, click <a id="current_lunch_json">HERE</a>.<br/><b>W.I.P.</b></p>
+		<p>This part of the website is still a work in progress. If you have any issues, complaints, or suggestions, please submit them <a target="_blank" href="https://en.wikipedia.org/wiki/Cheese" style="font-size: inherit;"><u>HERE</u></a>.</p>
+		</div><br/><br/>
+	<hr style="background-size: 4px; border-top: 4px solid #FFF0F2;
+	border-color: #1E2124;"><br/><br/>
+	<h1 style="text-align:center;">Lunch</h1>
+	<br/>
+
+	<div class="container">
+	<div class="card-columns">
+		<div class="card bg-primary">
+			<div class="card-body text-center" id="card#1">
+				<p class="card-text" id="menu_type#1"><br/>NO LUNCH TODAY<br/><i class="smalltext" id="lunch_items#4">Check back on Monday for new lunch schedules!</i></p>
+			</div>
+		</div>
+		<div class="card bg-primary">
+			<div class="card-body text-center" id="card#4">
+				<p class="card-text" id="menu_type#4"><br/>NO LUNCH TODAY<br/><i class="smalltext" id="lunch_items#4">Check back on Monday for new lunch schedules!</i></p>
+			</div>
+		</div>
+		<div class="card bg-primary">
+			<div class="card-body text-center" id="card#2">
+				<p class="card-text" id="menu_type#2"><br/>NO LUNCH TODAY<br/><i class="smalltext" id="lunch_items#2">Check back on Monday for new lunch schedules!</i></p>
+			</div>
+		</div>
+		<div class="card bg-primary">
+			<div class="card-body text-center" id="card#5">
+				<p class="card-text grey" id="menu_type#5"><br/>MORE COMING SOON<br/><i class="smalltext" id="lunch_items#5">Coming Soon...</i><br/><br/></p>
+			</div>
+		</div>
+		<div class="card bg-primary">
+			<div class="card-body text-center" id="card#3">
+				<p class="card-text" id="menu_type#3"><br/>NO LUNCH TODAY<br/><i class="smalltext" id="lunch_items#3">Check back on Monday for new lunch schedules!</i></p>
+			</div>
+		</div>
+		<div class="card bg-primary">
+			<div class="card-body text-center" id="card#6">
+				<p class="card-text grey" id="menu_type#6"><br/>MORE COMING SOON<br/><i class="smalltext" id="lunch_items#6">Coming Soon...</i><br/><br/></p>
+			</div>
+		</div>
 	</div>
+	</div><br/><br/>
+
+	<!-- <div class="btn" onClick="addAnother()"> Add Eelement </div> -->
+</div>
+<br/>
+<div class="footer">
+	<p>Copyright &copy; <a target="_blank" style="font-size:18px;" href="mailto:liketoaccess@protonmail.com?subject=Mail%20from%20SAVHS.GA!&body=Feel%20free%20to%20send%20me%20E-mail!">Ian Ault</a> - 2022</p>
+</div>
 </body>
 </html>
