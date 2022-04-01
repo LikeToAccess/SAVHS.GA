@@ -50,5 +50,7 @@ var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0');
 var yyyy = today.getFullYear();
 
-today = "https://SAVHS.GA/Lunch/Logs/LD_" + yyyy + "-" + mm + '-' + dd + ".json";
-current_lunch_link =
+var current_lunch_link_url = "https://SAVHS.GA/Lunch/Logs/LD_" + yyyy + "-" + mm + '-' + dd + ".json";
+// https://www.savhs.ga/lunch/logs/LD_2022-03-29.json
+var current_lunch_link = document.getElementById("current_lunch_json");
+current_lunch_link.setAttribute("href", current_lunch_link_url);
