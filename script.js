@@ -3,26 +3,41 @@ if (document.location.search.match(/type=embed/gi)) {
 	window.parent.postMessage("resize", "*");
 }
 
-function sortList() {
-	var list, i, switching, b, shouldSwitch;
-	list = document.getElementById("ordered_list");
-	switching = true;
-	while (switching) {
-		switching = false;
-		b = list.getElementsByTagName("LI");
-		for (i = 0; i < (b.length - 1); i++) {
-			shouldSwitch = false;
-			if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
-				shouldSwitch = true;
-				break;
-			}
+loadJSON = function() {
+	var iterations = 0;
+	obj.forEach(function(element) {
+		iterations += 1;
+		if (element.menu_type) {
+			const menu_type_default = document.getElementById("menu_type#" + iterations); menu_type_default.remove();
+			var card = document.getElementById("card#" + iterations);
+
+			const menu_type = document.createElement("p");
+			menu_type.setAttribute("class", "card-text");
+
+			const lunch_items = document.createElement("i");
+			lunch_items.setAttribute("class", "smalltext");
+
+			var children = menu_type.children.length + 1
+			menu_type.appendChild(document.createTextNode(String(element.menu_type).replaceAll(" - SANB Secondary School", "")));
+			const line_break = document.createElement("br");
+			menu_type.appendChild(line_break);
+			lunch_items.appendChild(document.createTextNode(String(element.lunch_items).replaceAll(",", ", ")));
+			card.appendChild(menu_type);
+			menu_type.appendChild(lunch_items);
 		}
-		if (shouldSwitch) {
-			b[i].parentNode.insertBefore(b[i + 1], b[i]);
-			switching = true;
-		}
-	}
+	});
 }
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0');
+var yyyy = today.getFullYear();
+
+var current_lunch_link_url = "logs/LD_" + yyyy + "-" + mm + '-' + dd + ".json";
+var current_lunch_link = document.getElementById("current_lunch_json");
+var current_lunch_script = document.getElementById("current_lunch_script");
+current_lunch_link.setAttribute("href", current_lunch_link_url);
+current_lunch_script.setAttribute("src", current_lunch_link_url + ".js");
 
 function onSignIn(googleUser) {
 	var profile = googleUser.getBasicProfile();
