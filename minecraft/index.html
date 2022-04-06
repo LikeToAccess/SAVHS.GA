@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Student created website for announcements, lunch schedules, senior quotes, and more fun features.">
+	<meta name="keywords" content="savhs, st anthony village high school, lunch menu, school, st anthony, savhs.ga">
+	<meta name="copyright" content="Copyright Ian Ault">
+	<meta name="author" content="Ian Ault">
+	<meta http-equiv="content-language" content="EN">
+	<meta name="Charset" content="UTF-8">
+	<meta name="Distribution" content="Global">
+	<meta name="Rating" content="General">
+	<meta name="Robots" content="INDEX,FOLLOW">
+	<meta name="Revisit-after" content="1 Day">
+
+	<title>LUNCH.SAVHS.GA</title>
+	<meta name="google-signin-client_id" content="599304315257-teen55k1d7jg543qae66m86idr5lb6sc.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<link rel="icon" type="image/x-icon" href="https://savhs.ga/favicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://savhs.ga/style.css">
+	<link rel="stylesheet" href="../style.css">
+	<script src="https://kit.fontawesome.com/eb5d4c9168.js" crossorigin="anonymous"></script>
+	<title>Today's Lunch</title>
+	<script type="text/javascript" id="current_lunch_script"></script>
+</head>
+
+<body onload="loadJSON()" translate="no">
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="display: flex; justify-content: space-between;">
+		<!-- Brand/logo -->
+		<a class="navbar-brand" href="https://savhs.ga/">
+			<img class="rounded" src="https://savhs.ga/huskies_logo.png" alt="logo" style="width:40px;">
+		</a>
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" href="https://savhs.ga/"><i class="fas fa-list"></i> Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://savhs.ga/lunch"><i class="fas fa-burger"></i> Today's Lunch</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://www.openthebooks.com/members/employer-detail/?Id=50427&tab=1" target="_blank"><i class="fas fa-link"></i> Teacher Salaries</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link disabled grey" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://github.com/LikeToAccess/SAVHS.GA" target="_blank"><i class="fab fa-github"></i> Github</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href><i class="fas fa-cube"></i> Minecraft</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<div class="dropdown">
+					<a class="nav-link" href="https://savhs.ga/account"><i class="fa-solid fa-user"></i> Account</a>
+					<div class="dropdown-content">
+						<a href data-onsuccess="onSignIn">Login</a>
+						<a href onclick="signOut();">Logout</a>
+						<!-- <a href="">Link 3</a> -->
+					</div>
+				</div>
+			</li>
+		</ul>
+	</nav>
+
+<div class="container-fluid cont">
+	<br/>
+	<h1 style="text-align:center;">SAVHS.GA Minecraft Server</h1>
+	<br/>
+	<div class="container text-center">
+		<p>The SAVHS.GA server is top of the line, running a fully dedicated Ryzen 9 5900X along with 32GB of RAM and Fiber Optic Internet. We aim for a smooth and consistant SMP experience.</p>
+		<p>Server IP is <i>SAVHS.GA</i></p>
+		</div><br/><br/>
+	<hr style="background-size: 4px; border-top: 4px solid #FFF0F2;
+	border-color: #1E2124;"><br/><br/>
+	<h1 style="text-align:center;">Minecraft</h1>
+	<br/>
+	<img src="https://savhs.ga/minecraft_server.png">
+	<br/><br/>
+
+</div>
+<br/>
+<div class="footer">
+	<div style="display: flex; justify-content: space-between;">
+		<p>Copyright &copy; <a target="_blank" style="font-size:18px;" href="mailto:liketoaccess@protonmail.com?subject=Mail%20from%20SAVHS.GA!&body=Feel%20free%20to%20send%20me%20E-mail!">Ian Ault</a> - 2022</p>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="https://savhs.ga/script.js"></script>
+</html>
