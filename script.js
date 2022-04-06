@@ -41,10 +41,14 @@ current_lunch_script.setAttribute("src", current_lunch_link_url + ".js");
 
 function onSignIn(googleUser) {
 	var profile = googleUser.getBasicProfile();
-	console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-	console.log('Name: ' + profile.getName());
-	console.log('Image URL: ' + profile.getImageUrl());
-	console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+	var id = profile.getId();
+	var name = profile.getName();
+	var imageUrl = profile.getImageUrl();
+	var email = profile.getEmail();
+	console.log('ID: ' + id); // Do not send to your backend! Use an ID token instead.
+	console.log('Name: ' + name);
+	console.log('Image URL: ' + imageUrl);
+	console.log('Email: ' + email); // This is null if the 'email' scope is not present.
 }
 
 function signOut() {
@@ -53,3 +57,8 @@ function signOut() {
 		console.log('User signed out.');
 	});
 }
+
+console.log('ID: ' + id); // Do not send to your backend! Use an ID token instead.
+console.log('Name: ' + name);
+console.log('Image URL: ' + imageUrl);
+console.log('Email: ' + email); // This is null if the 'email' scope is not present.
