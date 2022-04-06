@@ -60,7 +60,7 @@ function signOut() {
 	});
 }
 
-console.log('ID: ' + id); // Do not send to your backend! Use an ID token instead.
-console.log('Name: ' + name);
-console.log('Image URL: ' + imageUrl);
-console.log('Email: ' + email); // This is null if the 'email' scope is not present.
+// console.log('ID: ' + id); // Do not send to your backend! Use an ID token instead.
+// console.log('Name: ' + name);
+// console.log('Image URL: ' + imageUrl);
+// console.log('Email: ' + email); // This is null if the 'email' scope is not present.
