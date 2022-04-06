@@ -28,16 +28,18 @@ loadJSON = function() {
 	});
 }
 
-var today = new Date();
-var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0');
-var yyyy = today.getFullYear();
+loadLunch = function() {
+	var today = new Date();
+	var dd = String(today.getDate()).padStart(2, '0');
+	var mm = String(today.getMonth() + 1).padStart(2, '0');
+	var yyyy = today.getFullYear();
 
-var current_lunch_link_url = "logs/LD_" + yyyy + "-" + mm + '-' + dd + ".json";
-var current_lunch_link = document.getElementById("current_lunch_json");
-var current_lunch_script = document.getElementById("current_lunch_script");
-current_lunch_link.setAttribute("href", current_lunch_link_url);
-current_lunch_script.setAttribute("src", current_lunch_link_url + ".js");
+	var current_lunch_link_url = "logs/LD_" + yyyy + "-" + mm + '-' + dd + ".json";
+	var current_lunch_link = document.getElementById("current_lunch_json");
+	var current_lunch_script = document.getElementById("current_lunch_script");
+	current_lunch_link.setAttribute("href", current_lunch_link_url);
+	current_lunch_script.setAttribute("src", current_lunch_link_url + ".js");
+}
 
 function onSignIn(googleUser) {
 	var profile = googleUser.getBasicProfile();
