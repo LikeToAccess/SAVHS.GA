@@ -48,14 +48,14 @@ p {
   display: none;
   position: absolute;
   background-color: #23272A;
-  min-width: 160px;
+  min-width: 104px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
   z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  color: black;
+  /*color: #171A1C;*/
   padding: 12px 16px;
   text-decoration: none;
   display: block;
