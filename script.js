@@ -74,6 +74,11 @@ function displayAccountDetails(id, name, imageUrl, email) {
 	console.log(name);
 }
 
+// function popOutWindow(url) {
+// 	popupWindow = window.open(
+// 		url,'popUpWindow','height=200,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes');
+// }
+
 
 // console.log('ID: ' + id); // Do not send to your backend! Use an ID token instead.
 // console.log('Name: ' + name);
