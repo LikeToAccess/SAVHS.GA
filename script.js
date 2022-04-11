@@ -69,6 +69,9 @@ function displayAccountDetails() {
 	username_field.innerText = name;
 }
 
+console.log(window.location.href == "https://savhs.ga/");
+console.log(profile !== "undefined")
+
 if (window.location.href == "https://savhs.ga/" && profile !== "undefined") {
 	displayAccountDetails();
 }
