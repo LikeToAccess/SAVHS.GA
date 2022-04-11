@@ -51,7 +51,7 @@ function onSignIn(googleUser) {
 	console.log('Name: ' + name);
 	console.log('Image URL: ' + imageUrl);
 	console.log('Email: ' + email); // This is null if the 'email' scope is not present.
-	if (window.location.href == "https://www.savhs.ga/") {
+	if (["https://www.savhs.ga/", "https://savhs.ga/"].includes(window.location.href)) {
 		displayAccountDetails(id, name, imageUrl, email);
 	}
 }
