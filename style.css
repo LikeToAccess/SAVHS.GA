@@ -19,7 +19,7 @@ body {
 }
 
 p {
-	font-size:18px;
+	font-size:20px;
 }
 
 .nav-item {
@@ -84,7 +84,7 @@ p {
 }
 
 .smalltext {
-	font-size:12px;
+	font-size:14px;
 }
 
 .line {
@@ -131,7 +131,7 @@ p {
 a {
 	color:#fff !important;
 	transition:.3s;
-	font-size:14px;
+	font-size:16px;
 }
 
 .dropdown-divider {
