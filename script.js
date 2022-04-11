@@ -70,7 +70,8 @@ function signOut() {
 function getDomainGroupAssociation(username) {
 	console.log(username);
 	domain_group_memberships.forEach(function(element) {
-		console.log(element.member)
+		console.log(element)
+		// console.log(element.domain_users)
 	});
 }
 
