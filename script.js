@@ -52,7 +52,7 @@ function onSignIn(googleUser) {
 	console.log('Image URL: ' + imageUrl);
 	console.log('Email: ' + email); // This is null if the 'email' scope is not present.
 	if (window.location.href == "https://savhs.ga/" && profile !== "undefined") {
-		displayAccountDetails();
+		displayAccountDetails(id, name, imageUrl, email);
 	}
 }
 
@@ -67,7 +67,7 @@ function signOut() {
 	});
 }
 
-function displayAccountDetails() {
+function displayAccountDetails(id, name, imageUrl, email) {
 	var username_field = document.getElementById("username");
 	username_field.innerText = name;
 	username_field.removeAttribute("hidden"); 
