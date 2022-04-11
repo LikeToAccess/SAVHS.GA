@@ -72,9 +72,11 @@ function getDomainGroupAssociation(username) {
 	var iterations = 0;
 
 	domain_group_memberships.forEach(function(element) {
-		console.log(element[iterations])
-		console.log(element[iterations].includes("ISD282\\" + username))
-		iterations += 1;
+		for (const [key, value] of Object.entries(element)) {
+			console.log(element[key])
+			console.log(element[key].includes("ISD282\\" + username))
+			iterations += 1;
+		}
 		// console.log(element.domain_users)
 	});
 }
