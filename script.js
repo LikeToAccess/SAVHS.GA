@@ -51,6 +51,9 @@ function onSignIn(googleUser) {
 	console.log('Name: ' + name);
 	console.log('Image URL: ' + imageUrl);
 	console.log('Email: ' + email); // This is null if the 'email' scope is not present.
+	if (window.location.href == "https://savhs.ga/" && profile !== "undefined") {
+		displayAccountDetails();
+	}
 }
 
 if (window.location.href == "https://savhs.ga/lunch/") {
@@ -67,14 +70,9 @@ function signOut() {
 function displayAccountDetails() {
 	var username_field = document.getElementById("username");
 	username_field.innerText = name;
+	username_field.removeAttribute("hidden"); 
 }
 
-console.log(window.location.href == "https://savhs.ga/");
-console.log(profile !== "undefined")
-
-if (window.location.href == "https://savhs.ga/" && profile !== "undefined") {
-	displayAccountDetails();
-}
 
 // console.log('ID: ' + id); // Do not send to your backend! Use an ID token instead.
 // console.log('Name: ' + name);
