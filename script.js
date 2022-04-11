@@ -89,7 +89,10 @@ function getDomainGroupAssociation(username) {
 
 function displayAccountDetails(id, name, imageUrl, email) {
 	groups = getDomainGroupAssociation(email.replace("@isd282.org", ""));
-	console.log(groups);
+	for (var i = 0; i < groups.length; i++) {
+		console.log(groups[i].member);
+		name = name.concat(", ", groups[i].member)
+	}
 
 	var username_field = document.getElementById("username");
 	username_field.innerText = name;
