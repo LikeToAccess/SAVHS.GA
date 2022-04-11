@@ -67,11 +67,20 @@ function signOut() {
 	});
 }
 
+function getDomainGroupAssociation(username) {
+	console.log(username);
+	domain_group_memberships.forEach(function(element) {
+		console.log(element.member)
+	});
+}
+
 function displayAccountDetails(id, name, imageUrl, email) {
+	groups = getDomainGroupAssociation(email.replace("@isd282.org", ""));
+
 	var username_field = document.getElementById("username");
 	username_field.innerText = name;
 	username_field.parentNode.removeAttribute("hidden"); 
-	console.log(name);
+	// console.log(name);
 }
 
 // function popOutWindow(url) {
