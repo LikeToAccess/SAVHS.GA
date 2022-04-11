@@ -64,6 +64,15 @@ function signOut() {
 	});
 }
 
+function displayAccountDetails() {
+	var username_field = document.getElementById("username");
+	username_field.innerText = name;
+}
+
+if (window.location.href == "https://savhs.ga/" && profile !== "undefined") {
+	displayAccountDetails();
+}
+
 // console.log('ID: ' + id); // Do not send to your backend! Use an ID token instead.
 // console.log('Name: ' + name);
 // console.log('Image URL: ' + imageUrl);
