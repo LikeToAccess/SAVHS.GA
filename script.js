@@ -55,8 +55,8 @@ function onSignIn(googleUser) {
 		[
 			"https://www.savhs.ga/",
 			"https://savhs.ga/",
-			"https://savhs.ga/account",
-			"https://www.savhs.ga/account"
+			"https://savhs.ga/account/",
+			"https://www.savhs.ga/account/"
 		].includes(window.location.href)
 	) {
 		displayAccountDetails(id, name, imageUrl, email);
