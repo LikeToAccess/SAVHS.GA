@@ -70,7 +70,8 @@ function signOut() {
 function displayAccountDetails(id, name, imageUrl, email) {
 	var username_field = document.getElementById("username");
 	username_field.innerText = name;
-	username_field.removeAttribute("hidden"); 
+	username_field.parentNode.removeAttribute("hidden"); 
+	console.log(name);
 }
 
 
