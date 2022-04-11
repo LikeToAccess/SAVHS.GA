@@ -69,19 +69,27 @@ function signOut() {
 
 function getDomainGroupAssociation(username) {
 	console.log(username);
+	var groups = [];
+
 	domain_group_memberships.forEach(function(element) {
 		for (const [key, value] of Object.entries(element)) {
 			for (var i = 0; i < element[key].length; i++) {
-				console.log(element[key][i]);
-				console.log(element[key][i].member.includes("ISD282\\" + username));
+				// console.log(element[key][i]);
+				// console.log(element[key][i].member.includes("ISD282\\" + username));
+				if (element[key][i].member.includes("ISD282\\" + username)) {
+					groups.push(element[key][i]);
+				}
 			}
 		}
 		// console.log(element.domain_users)
 	});
+
+	return groups;
 }
 
 function displayAccountDetails(id, name, imageUrl, email) {
 	groups = getDomainGroupAssociation(email.replace("@isd282.org", ""));
+	console.log(groups);
 
 	var username_field = document.getElementById("username");
 	username_field.innerText = name;
