@@ -107,6 +107,12 @@ function displayAccountDetails(id, name, imageUrl, email) {
 	// console.log(name);
 }
 
+document.addEventListener("keydown", function(event) {
+	if(event.keyCode == 83) {
+		document.getElementById("spin").setAttribute("class", "spin");
+	}
+});
+
 // function popOutWindow(url) {
 // 	popupWindow = window.open(
 // 		url,'popUpWindow','height=200,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes');

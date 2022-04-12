@@ -5,6 +5,15 @@ body {
 	margin:0;
 }
 
+body {
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+}
+
+body.spin {
+	transform:rotate(360deg);
+}
+
 .container-fluid {
 	border-bottom: 4px solid #171A1C;
 }
