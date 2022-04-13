@@ -66,7 +66,15 @@ function onSignIn(googleUser) {
 		].includes(window.location.href)
 	) {
 		displayAccountDetails(id, name, imageUrl, email);
-
+	}
+	else if (
+		[
+			"https://www.savhs.ga/flap",
+			"https://savhs.ga/flap"
+		].includes(window.location.href)
+	) {
+		// displayAccountDetails(id, name, imageUrl, email);
+		document.getElementById("container-div").setAttribute("id", "container");
 	}
 }
 
