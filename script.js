@@ -74,7 +74,7 @@ function onSignIn(googleUser) {
 		].includes(window.location.href)
 	) {
 		// displayAccountDetails(id, name, imageUrl, email);
-		document.getElementById("container-div").setAttribute("id", "container");
+		document.getElementById("sketch-script").setAttribute("src", "sketch.js");
 	}
 }
 
