@@ -77,11 +77,7 @@ function onSignIn(googleUser) {
 		// console.log("TEST");
 		document.getElementById("flap-h1").innerText = "Flap Bird";
 		document.getElementById("flap-p").removeAttribute("hidden");
-		// document.getElementById("sketch-script").setAttribute("src", "sketch.js");
-		var scriptTag = document.createElement("script")
-		scriptTag.src = "sketch.js";
-		var footer = document.getElementsByClassName("footer")[0];
-		footer.appendChild(scriptTag);
+		document.getElementById("container").removeAttribute("hidden");
 	}
 }
 
