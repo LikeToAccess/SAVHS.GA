@@ -66,7 +66,9 @@ function onSignIn(googleUser) {
 		].includes(window.location.href)
 	) {
 		displayAccountDetails(id, name, imageUrl, email);
-		document.getElementById("flap-link").removeAttribute("class").setAttribute("href", "https://savhs.ga/flap/");
+		var flapLink = document.getElementById("flap-link");
+		flapLink.removeAttribute("class");
+		flapLink.setAttribute("href", "https://savhs.ga/flap/");
 	}
 	else if (
 		[
