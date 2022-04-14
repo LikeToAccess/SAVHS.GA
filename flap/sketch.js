@@ -11,6 +11,7 @@ function setup() {
 	bot.color = "blue";
 	bird.x = 250;
 	bot.x = 100;
+	console.log("Setup complete.");
 }
 
 function draw() {
