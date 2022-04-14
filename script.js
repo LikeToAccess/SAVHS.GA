@@ -75,7 +75,8 @@ function onSignIn(googleUser) {
 	) {
 		// displayAccountDetails(id, name, imageUrl, email);
 		// console.log("TEST");
-		document.getElementById("flap-h1").innerText = "Flap Bird"
+		document.getElementById("flap-h1").innerText = "Flap Bird";
+		document.getElementById("flap-p").removeAttribute("hidden");
 		document.getElementById("sketch-script").setAttribute("src", "sketch.js");
 	}
 }
@@ -120,7 +121,7 @@ function displayAccountDetails(id, name, imageUrl, email) {
 
 	var username_field = document.getElementById("username");
 	username_field.innerText = name;
-	username_field.parentNode.removeAttribute("hidden"); 
+	username_field.parentNode.removeAttribute("hidden");
 	// console.log(name);
 }
 
