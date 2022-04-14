@@ -74,7 +74,8 @@ function onSignIn(googleUser) {
 		].includes(window.location.href)
 	) {
 		// displayAccountDetails(id, name, imageUrl, email);
-		console.log("TEST");
+		// console.log("TEST");
+		document.getElementById("flap-h1").innerText = "Flap Bird"
 		document.getElementById("sketch-script").setAttribute("src", "sketch.js");
 	}
 }
