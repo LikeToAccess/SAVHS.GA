@@ -48,7 +48,7 @@ function draw() {
 
 
 function keyPressed() {
-	if (key == " " || key == "ArrowUp") {
+	if (key == " ") {
 		bird.up();
 	}
 }

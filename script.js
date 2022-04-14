@@ -80,8 +80,8 @@ function onSignIn(googleUser) {
 		// document.getElementById("sketch-script").setAttribute("src", "sketch.js");
 		var scriptTag = document.createElement("script")
 		scriptTag.src = "sketch.js";
-		var head = document.getElementsByTagName("head")[0];
-		head.appendChild(scriptTag);
+		var footer = document.getElementByClass("footer");
+		footer.appendChild(scriptTag);
 	}
 }
 
