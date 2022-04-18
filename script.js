@@ -84,11 +84,13 @@ function onSignIn(googleUser) {
 		document.getElementById("container").removeAttribute("hidden");
 	}
 	loginLink = document.getElementById("login-link");
-	loginLink.setAttribute("class", "grey disabled")
-	loginLink.setAttribute("title", "Already logged in.")
+	loginLink.setAttribute("class", "grey disabled");
+	loginLink.setAttribute("title", "Already logged in.");
+	loginLink.removeAttribute("href")
 	logoutLink = document.getElementById("logout-link");
-	logoutLink.removeAttribute("class")
-	logoutLink.removeAttribute("title")
+	logoutLink.removeAttribute("class");
+	logoutLink.removeAttribute("title");
+	logoutLink.setAttribute("href");
 }
 
 if (window.location.href == "https://savhs.ga/lunch/") {
@@ -143,7 +145,8 @@ document.addEventListener("keydown", function(event) {
 
 logoutLink = document.getElementById("logout-link");
 logoutLink.setAttribute("class", "grey disabled");
-logoutLink.setAttribute("title", "Not logged in.")
+logoutLink.setAttribute("title", "Not logged in.");
+logoutLink.removeAttribute("href");
 
 
 // function popOutWindow(url) {
