@@ -83,6 +83,12 @@ function onSignIn(googleUser) {
 		document.getElementById("flap-p").removeAttribute("hidden");
 		document.getElementById("container").removeAttribute("hidden");
 	}
+	loginLink = document.getElementById("login-link");
+	loginLink.setAttribute("class", "grey disabled")
+	loginLink.setAttribute("title", "Already logged in.")
+	logoutLink = document.getElementById("logout-link");
+	logoutLink.removeAttribute("class")
+	logoutLink.removeAttribute("title")
 }
 
 if (window.location.href == "https://savhs.ga/lunch/") {
@@ -134,6 +140,11 @@ document.addEventListener("keydown", function(event) {
 		document.getElementById("spin").setAttribute("class", "spin");
 	}
 });
+
+logoutLink = document.getElementById("logout-link");
+logoutLink.setAttribute("class", "grey disabled");
+logoutLink.setAttribute("title", "Not logged in.")
+
 
 // function popOutWindow(url) {
 // 	popupWindow = window.open(

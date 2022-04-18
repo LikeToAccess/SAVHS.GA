@@ -57,9 +57,8 @@
 				<div class="dropdown">
 					<a class="nav-link" href="https://savhs.ga/account"><i class="fa-solid fa-user"></i> Account</a>
 					<div class="dropdown-content">
-						<a href="https://savhs.ga/account">Login</a>
-						<a href onclick="signOut();">Logout</a>
-						<!-- <a href="">Link 3</a> -->
+						<a id="login-link" href="https://savhs.ga/account">Login</a>
+						<a id="logout-link" href onclick="signOut();">Logout</a>
 					</div>
 				</div>
 			</li>
@@ -82,10 +81,10 @@
 	<div style="padding-left: 12%;">
 		<ul>
 			<li class="grey">
-				<a id="flap-link" class="disabled grey">Flap Bird</a>
+				<a id="flap-link" class="disabled grey" title="You must be logged in to view this.">Flap Bird</a>
 			</li>
 			<li class="grey">
-				<a id="discord-link" class="disabled grey">Discord</a>
+				<a id="discord-link" class="disabled grey" title="You must be logged in to view this.">Discord</a>
 			</li>
 		</ul>
 	</div>
