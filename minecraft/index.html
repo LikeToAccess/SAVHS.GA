@@ -43,8 +43,8 @@
 			<li class="nav-item">
 				<a class="nav-link" href="https://www.openthebooks.com/members/employer-detail/?Id=50427&tab=1" target="_blank"><i class="fas fa-link"></i> Teacher Salaries</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="https://discord.gg/BAcDKa3j3j" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+			<li class="nav-item disabled">
+				<a class="nav-link grey" target="_blank" id="discord-nav-link" title="You must be logged in to join the Discord."><i class="fab fa-discord"></i> Discord</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="https://github.com/LikeToAccess/SAVHS.GA" target="_blank"><i class="fab fa-github"></i> Github</a>
@@ -67,6 +67,9 @@
 	</nav>
 
 <div class="container-fluid cont">
+	<div hidden>
+		<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+	</div>
 	<br/>
 	<h1 style="text-align:center;">SAVHS.GA Minecraft Server</h1>
 	<br/>
