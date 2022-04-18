@@ -1,13 +1,13 @@
 body {
 	background:#1E2124;
 	color:#fff;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
 	margin:0;
 }
 
 body {
-    transition: transform 1s;
-    -webkit-transition: transform 1s;
+		transition: transform 1s;
+		-webkit-transition: transform 1s;
 }
 
 body.spin {
@@ -19,11 +19,11 @@ body.spin {
 }
 
 .bg-primary {
-	background:#1E2124 !important;
+	background:#1E2124!important;
 }
 
 .disabled {
-	color:#c9c9c9 !important;
+	color: #c9c9c9!important;
 	cursor:not-allowed;
 }
 
@@ -31,11 +31,28 @@ p {
 	font-size:20px;
 }
 
+a a:visited a:hover a:active {
+	/*color:#fff!important;*/
+	color: #cfcfd8;
+	transition:.3s;
+	font-size:16px;
+}
+
+a:link {
+	color: #cfcfd8;
+}
+
+.smalltext {
+	font-size:14px;
+	color: #cfcfd8;
+}
+
 .nav-item {
 	padding-left:8px;
 	border-radius: 30%;
 	background-color: #23272A;
 	animation: expandout ease-out 0.25s;
+	/*color: #fff!important;*/
 }
 
 .nav-item:hover {
@@ -48,26 +65,26 @@ p {
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #23272A;
-  min-width: 104px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
-  z-index: 1;
+	display: none;
+	position: absolute;
+	background-color: #23272A;
+	min-width: 104px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+	z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
-  /*color: #171A1C;*/
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+	/*color: #171A1C;*/
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
 }
 
 /* Change color of dropdown links on hover */
@@ -82,7 +99,7 @@ p {
 }
 
 .bg-dark {
-	background:#23272A !important;
+	background:#23272A!important;
 	border-bottom: 4px solid #171A1C;
 }
 
@@ -92,16 +109,12 @@ p {
 	float:left;
 }
 
-.smalltext {
-	font-size:14px;
-}
-
 .line {
-	border-bottom: 5px #000 !important;
+	border-bottom: 5px #000!important;
 }
 
 .grey {
-	color:#737373 !important;
+	color:#737373!important;
 }
 
 .card-icon {
@@ -131,34 +144,69 @@ p {
 	transition: transform .3s ease;
 }*/
 
+/*.overlay{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: rgba(0,0,0,0.5);
+}*/
+
+@media screen and (max-width: 1000px) {
+	.table-column {
+		width: 100%!important;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.table-column {
+		flex: 50%;
+		padding: 0.5%;
+	}
+
+	.table-row {
+		display: flex;
+		padding-left: 7%;
+		padding-right: 7%;
+	}
+}
+
+
+.tear-drop-top-left {
+	border-radius: 0 20px 20px 20px!important;
+}
+
+.tear-drop-bottom-right {
+	border-radius: 20px 20px 0 20px!important;
+}
+
+.drop-shadow {
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+
 ::-webkit-scrollbar {
-  width: 10px;
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 2px;
+	background: #1E2124;
+	border-radius: 2.5px;
 }
  
 ::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 2px;
+	background: #888;
+	border-radius: 2.5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+	background: #555;
 }
 
 .title {
 	color:#fff;
 	padding-left:10px;
 	float:left;
-}
-
-a {
-	color:#fff !important;
-	transition:.3s;
-	font-size:16px;
 }
 
 .dropdown-divider {
@@ -174,6 +222,30 @@ a {
 	padding:30px;
 	height:auto;
 	background:#23272A;
+}
+
+.zoom {
+	transition: transform .2s;
+}
+
+img.zoom:hover {
+	-ms-transform: scale(1.1); /* IE 9 */
+	-webkit-transform: scale(1.1); /* Safari 3-8 */
+	transform: scale(1.1); 
+}
+
+div.zoom:hover {
+	-ms-transform: scale(1.04); /* IE 9 */
+	-webkit-transform: scale(1.04); /* Safari 3-8 */
+	transform: scale(1.04); 
+}
+
+.gradiant {
+	/*height: 200px;*/
+	/*background-color: red;  For browsers that do not support gradients */
+	background: linear-gradient(to bottom right, #6af0f5, #726efc, #be71ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 @keyframes expandin {
