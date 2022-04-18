@@ -73,10 +73,16 @@ function onSignIn(googleUser) {
 		flapLink.setAttribute("href", "https://savhs.ga/flap/");
 
 		var discordLink = document.getElementById("discord-link");
-		flapLink.removeAttribute("class");
-		flapLink.removeAttribute("title");
-		flapLink.parentElement.removeAttribute("class");
-		flapLink.setAttribute("href", "https://discord.gg/BAcDKa3j3j");
+		discordLink.removeAttribute("class");
+		discordLink.removeAttribute("title");
+		discordLink.parentElement.removeAttribute("class");
+		discordLink.setAttribute("href", "https://discord.gg/BAcDKa3j3j");
+
+		var discordNavLink = document.getElementById("discord-nav-link");
+		discordNavLink.setAttribute("class", "nav-link")
+		discordNavLink.removeAttribute("title");
+		discordNavLink.parentElement.setAttribute("class", "nav-item");
+		discordNavLink.setAttribute("href", "https://discord.gg/BAcDKa3j3j");
 	}
 	else if (
 		[
