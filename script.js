@@ -77,12 +77,6 @@ function onSignIn(googleUser) {
 		discordLink.removeAttribute("title");
 		discordLink.parentElement.removeAttribute("class");
 		discordLink.setAttribute("href", "https://discord.gg/BAcDKa3j3j");
-
-		var discordNavLink = document.getElementById("discord-nav-link");
-		discordNavLink.setAttribute("class", "nav-link")
-		discordNavLink.removeAttribute("title");
-		discordNavLink.parentElement.setAttribute("class", "nav-item");
-		discordNavLink.setAttribute("href", "https://discord.gg/BAcDKa3j3j");
 	}
 	else if (
 		[
@@ -96,11 +90,18 @@ function onSignIn(googleUser) {
 		document.getElementById("flap-p").removeAttribute("hidden");
 		document.getElementById("container").removeAttribute("hidden");
 	}
-	loginLink = document.getElementById("login-link");
+	var discordNavLink = document.getElementById("discord-nav-link");
+	discordNavLink.setAttribute("class", "nav-link");
+	discordNavLink.removeAttribute("title");
+	discordNavLink.parentElement.setAttribute("class", "nav-item");
+	discordNavLink.setAttribute("href", "https://discord.gg/BAcDKa3j3j");
+
+	var loginLink = document.getElementById("login-link");
 	loginLink.setAttribute("class", "grey disabled");
 	loginLink.setAttribute("title", "Already logged in.");
 	loginLink.removeAttribute("href")
-	logoutLink = document.getElementById("logout-link");
+
+	var logoutLink = document.getElementById("logout-link");
 	logoutLink.removeAttribute("class");
 	logoutLink.removeAttribute("title");
 	logoutLink.setAttribute("href", "");
