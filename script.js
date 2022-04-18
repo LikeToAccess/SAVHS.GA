@@ -147,6 +147,7 @@ logoutLink = document.getElementById("logout-link");
 logoutLink.setAttribute("class", "grey disabled");
 logoutLink.setAttribute("title", "Not logged in.");
 logoutLink.removeAttribute("href");
+logoutLink.removeAttribute("onclick");
 
 
 // function popOutWindow(url) {
