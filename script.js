@@ -68,8 +68,15 @@ function onSignIn(googleUser) {
 		displayAccountDetails(id, name, imageUrl, email);
 		var flapLink = document.getElementById("flap-link");
 		flapLink.removeAttribute("class");
+		flapLink.removeAttribute("title");
 		flapLink.parentElement.removeAttribute("class");
 		flapLink.setAttribute("href", "https://savhs.ga/flap/");
+
+		var discordLink = document.getElementById("discord-link");
+		flapLink.removeAttribute("class");
+		flapLink.removeAttribute("title");
+		flapLink.parentElement.removeAttribute("class");
+		flapLink.setAttribute("href", "https://discord.gg/BAcDKa3j3j");
 	}
 	else if (
 		[
@@ -91,6 +98,7 @@ function onSignIn(googleUser) {
 	logoutLink.removeAttribute("class");
 	logoutLink.removeAttribute("title");
 	logoutLink.setAttribute("href", "");
+	logoutLink.setAttribute("onclick", "signOut();");
 }
 
 if (window.location.href == "https://savhs.ga/lunch/") {
