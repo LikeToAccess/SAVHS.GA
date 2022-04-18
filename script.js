@@ -90,7 +90,7 @@ function onSignIn(googleUser) {
 	logoutLink = document.getElementById("logout-link");
 	logoutLink.removeAttribute("class");
 	logoutLink.removeAttribute("title");
-	logoutLink.setAttribute("href");
+	logoutLink.setAttribute("href", "");
 }
 
 if (window.location.href == "https://savhs.ga/lunch/") {
