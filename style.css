@@ -31,16 +31,17 @@ p {
 	font-size:20px;
 }
 
-a a:visited a:hover a:active {
+a {
 	/*color:#fff!important;*/
 	color: #cfcfd8;
 	transition:.3s;
 	font-size:16px;
 }
 
-a:link {
-	color: #cfcfd8;
-}
+a:link {color: #fff}
+a:hover {color: #fff}
+a:visited {color: #fff}
+a:active {color: #fff}
 
 .smalltext {
 	font-size:14px;
@@ -61,6 +62,10 @@ a:link {
 	animation: expandin ease-out 0.25s;
 	padding-left: 28px;
 	padding-right: 20px;
+}
+
+.nav-link {
+	color: #fff!important;
 }
 
 /* The container <div> - needed to position the dropdown content */
