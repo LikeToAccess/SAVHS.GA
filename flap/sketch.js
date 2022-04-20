@@ -36,6 +36,7 @@ function draw() {
 		obstacles[i].show();
 		obstacles[i].update();
 		if (obstacles[i].hits(bird,bot)) {}
+		if (obstacles[i].clears(bird,bot)) {}
 		if (obstacles[i].x < -10) {
 			obstacles.splice(i, 1);
 		}
@@ -44,6 +45,8 @@ function draw() {
 			//console.log("up")
 		}
 	}
+
+	console.log(bird.score);
 }
 
 

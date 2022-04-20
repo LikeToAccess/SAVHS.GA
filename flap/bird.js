@@ -8,6 +8,7 @@ function Bird() {
 	this.hori_vel = 0;
 	this.max_speed = -15;
 	this.color = "red";
+	this.score = 0;
 
 	this.show = function() {
 		fill(this.color);
