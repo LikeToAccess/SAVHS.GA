@@ -164,28 +164,15 @@ function spinWebsite(spins) {
 	document.getElementById("spin").style.transform = "rotate(" + 360 * spins + "deg)";
 }
 
-var spins = 0;
-document.addEventListener("keydown", function(event) {
-	if ([82, 83].includes(event.keyCode)) {
-		spins++;
-		spinWebsite(spins);
-	}
-});
+function listenForSpinKeys(spinKeyCodes) {
+	var spins = 0;
+	document.addEventListener("keydown", function(event) {
+		if (spinKeyCodes.includes(event.keyCode)) {
+			spins++;
+			// if (spins > 100) {spins += spins}
+			spinWebsite(spins);
+		}
+	});
+}
 
-// logoutLink = document.getElementById("logout-link");
-// logoutLink.setAttribute("class", "grey disabled");
-// logoutLink.setAttribute("title", "Not logged in.");
-// logoutLink.removeAttribute("href");
-// logoutLink.removeAttribute("onclick");
-
-
-// function popOutWindow(url) {
-// 	popupWindow = window.open(
-// 		url,'popUpWindow','height=200,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes');
-// }
-
-
-// console.log('ID: ' + id); // Do not send to your backend! Use an ID token instead.
-// console.log('Name: ' + name);
-// console.log('Image URL: ' + imageUrl);
-// console.log('Email: ' + email); // This is null if the 'email' scope is not present.
+listenForSpinKeys([82, 83]);
