@@ -152,12 +152,25 @@ function displayAccountDetails(id, name, imageUrl, email) {
 	// console.log(name);
 }
 
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function spinWebsite(spins) {
+	// var spin = document.getElementById("spin");
+	// spin.setAttribute("class", "spin");
+	// await sleep(1000);
+	// spin.removeAttribute("class");
+	document.getElementById("spin").style.transform = "rotate(" + 360 * spins + "deg)";
+}
+
+var spins = 0;
 document.addEventListener("keydown", function(event) {
-	if(event.keyCode == 83) {
-		document.getElementById("spin").setAttribute("class", "spin");
+	if ([82, 83].includes(event.keyCode)) {
+		spins++;
+		spinWebsite(spins);
 	}
 });
-
 
 // logoutLink = document.getElementById("logout-link");
 // logoutLink.setAttribute("class", "grey disabled");

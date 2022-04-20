@@ -6,13 +6,13 @@ body {
 }
 
 body {
-		transition: transform 1s;
-		-webkit-transition: transform 1s;
+	transition: transform 1s;
+	-webkit-transition: transform 1s;
 }
 
-body.spin {
+/*body.spin {
 	transform:rotate(360deg);
-}
+}*/
 
 .container-fluid {
 	border-bottom: 4px solid #171A1C;
