@@ -158,6 +158,39 @@ document.addEventListener("keydown", function(event) {
 	}
 });
 
+function streamVideo() {
+	var stream = new FileStream(videoFilename, FileMode.Open, FileAccess.Read , FileShare.Read);
+
+	var mediaType = MediaTypeHeaderValue.Parse($"video/{videoFormat}");
+
+	if (Request.Headers.Range != null)
+	{
+		try
+		{
+			var partialResponse = Request.CreateResponse(HttpStatusCode.PartialContent);
+			partialResponse.Content = new ByteRangeStreamContent(stream, Request.Headers.Range, mediaType);
+
+			return partialResponse;
+		}
+		catch (InvalidByteRangeException invalidByteRangeException)
+		{
+			return Request.CreateErrorResponse(invalidByteRangeException);
+		}
+	}
+	else
+	{
+		// If it is not a range request we just send the whole thing as normal
+		var fullResponse = Request.CreateResponse(HttpStatusCode.OK);
+
+		fullResponse.Content = new StreamContent(stream);
+		fullResponse.Content.Headers.ContentType = mediaType;
+
+		return fullResponse;
+	}
+}
+
+streamVideo();
+
 
 // logoutLink = document.getElementById("logout-link");
 // logoutLink.setAttribute("class", "grey disabled");
