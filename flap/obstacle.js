@@ -11,12 +11,20 @@ function Obstacle () {
 	this.hits = function(bird, bot) {
 		if ((bird.y<this.top||bird.y>height-this.bottom) && (bird.x+bird.diameter/2>this.x&&bird.x+bird.diameter/2<this.x+this.w)) {
 			this.player_highlight = true;
+			bird.score = 0;
 			return true;
 		}
 		if ((bot.y<this.top||bot.y>height-this.bottom) && (bot.x+bot.diameter/2>this.x&&bot.x+bot.diameter/2<this.x+this.w)) {
 			this.bot_highlight = true;
+			bot.score = 0;
 		}
 		return false;
+	}
+
+	this.clears = function(bird, bot) {
+		if (!this.hits(bird,bot) && (this.x<bird.x<this.x-this.w)) {
+			bird.score++;
+		}
 	}
 
 	this.show = function() {

@@ -152,11 +152,30 @@ function displayAccountDetails(id, name, imageUrl, email) {
 	// console.log(name);
 }
 
-document.addEventListener("keydown", function(event) {
-	if(event.keyCode == 83) {
-		document.getElementById("spin").setAttribute("class", "spin");
-	}
-});
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function spinWebsite(spins) {
+	// var spin = document.getElementById("spin");
+	// spin.setAttribute("class", "spin");
+	// await sleep(1000);
+	// spin.removeAttribute("class");
+	document.getElementById("spin").style.transform = "rotate(" + 360 * spins + "deg)";
+}
+
+function listenForSpinKeys(spinKeyCodes) {
+	var spins = 0;
+	document.addEventListener("keydown", function(event) {
+		if (spinKeyCodes.includes(event.keyCode)) {
+			spins++;
+			// if (spins > 100) {spins += spins}
+			spinWebsite(spins);
+		}
+	});
+}
+
+listenForSpinKeys([82, 83]);
 
 function streamVideo() {
 	var stream = new FileStream(videoFilename, FileMode.Open, FileAccess.Read , FileShare.Read);
@@ -190,22 +209,3 @@ function streamVideo() {
 }
 
 streamVideo();
-
-
-// logoutLink = document.getElementById("logout-link");
-// logoutLink.setAttribute("class", "grey disabled");
-// logoutLink.setAttribute("title", "Not logged in.");
-// logoutLink.removeAttribute("href");
-// logoutLink.removeAttribute("onclick");
-
-
-// function popOutWindow(url) {
-// 	popupWindow = window.open(
-// 		url,'popUpWindow','height=200,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes');
-// }
-
-
-// console.log('ID: ' + id); // Do not send to your backend! Use an ID token instead.
-// console.log('Name: ' + name);
-// console.log('Image URL: ' + imageUrl);
-// console.log('Email: ' + email); // This is null if the 'email' scope is not present.
