@@ -177,10 +177,11 @@ function listenForSpinKeys(spinKeyCodes) {
 
 listenForSpinKeys([82, 83]);
 
-function streamVideo() {
+function streamVideo(videoFilename) {
 	var stream = new FileStream(videoFilename, FileMode.Open, FileAccess.Read , FileShare.Read);
 
-	var mediaType = MediaTypeHeaderValue.Parse($"video/{videoFormat}");
+	// var mediaType = MediaTypeHeaderValue.Parse($"video/{videoFormat}");
+	mediaType = MediaTypeHeaderValue.Parse("video/mp4")
 
 	if (Request.Headers.Range != null)
 	{
@@ -208,4 +209,5 @@ function streamVideo() {
 	}
 }
 
-streamVideo();
+streamVideo("video.mp4");
+
