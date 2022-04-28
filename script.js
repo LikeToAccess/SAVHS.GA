@@ -38,6 +38,7 @@ loadInstagramData = function() {
 		iterations += 1;
 	});
 
+	console.log(instagramData[getRandomInt(iterations)]);
 	return instagramData[getRandomInt(iterations)];
 }
 
@@ -191,7 +192,7 @@ function listenForSpinKeys(spinKeyCodes) {
 listenForSpinKeys([82, 83]);
 
 // document.getElementById("random-instagram-image").setAttribute("src", "https://savhs.ga/savhsseniors2022/")
-console.log(loadInstagramData());
+
 
 
 
