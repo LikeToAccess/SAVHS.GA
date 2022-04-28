@@ -1,4 +1,4 @@
-var obj = 
+var instagramData =
 [
     [
         {

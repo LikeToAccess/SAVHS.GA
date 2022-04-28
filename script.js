@@ -3,6 +3,10 @@ if (document.location.search.match(/type=embed/gi)) {
 	window.parent.postMessage("resize", "*");
 }
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
 loadJSON = function() {
 	var iterations = 0;
 	obj.forEach(function(element) {
@@ -26,6 +30,15 @@ loadJSON = function() {
 			menu_type.appendChild(lunch_items);
 		}
 	});
+}
+
+loadInstagramData = function() {
+	var iterations = 0;
+	instagramData.forEach(function(element) {
+		iterations += 1;
+	});
+
+	return instagramData[getRandomInt(iterations)];
 }
 
 loadLunch = function() {
@@ -176,6 +189,15 @@ function listenForSpinKeys(spinKeyCodes) {
 }
 
 listenForSpinKeys([82, 83]);
+
+// document.getElementById("random-instagram-image").setAttribute("src", "https://savhs.ga/savhsseniors2022/")
+console.log(loadInstagramData);
+
+
+
+
+
+
 
 // function streamVideo(videoFilename) {
 // 	var stream = new FileStream(videoFilename, FileMode.Open, FileAccess.Read , FileShare.Read);
