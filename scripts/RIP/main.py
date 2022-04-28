@@ -13,7 +13,7 @@
 import platform
 import sys
 import os
-# import time
+import time
 import json
 import shutil
 import tqdm
@@ -106,17 +106,18 @@ def main():
 
 		profile_images = []
 		for file in tqdm.tqdm(os.listdir(profile)):
-			profile_image = {}
+			profile_image = []
 			if file.endswith(".webp"):
 				os.system(f"{ffmpeg_binary} -i {profile}/{file} {profile}/{file.replace('.webp','.png')} -y -hide_banner -loglevel error")
 				if not os.path.exists(f"../../{profile}/"):
 					os.mkdir(f"../../{profile}/")
+
 				shutil.copyfile(f"{profile}/{file.replace('.webp','.png')}", f"../../{profile}/{file.replace('.webp','.png')}")
 
-				profile_image[file.replace(".webp", "")] = {
+				profile_image.append({
 					"image_filename": file.replace(".webp", ".png"),
 					"text":           read_file(profile+"/"+file.replace(".webp", ".txt")).strip("\n"),
-				}
+				})
 
 				profile_images.append(profile_image)
 
