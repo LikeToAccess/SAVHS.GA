@@ -38,8 +38,10 @@ loadInstagramData = function() {
 		iterations += 1;
 	});
 
-	console.log(instagramData[getRandomInt(iterations)]);
-	return instagramData[getRandomInt(iterations)];
+	var index = getRandomInt(iterations);
+
+	console.log(index);
+	return instagramData[index];
 }
 
 loadLunch = function() {
