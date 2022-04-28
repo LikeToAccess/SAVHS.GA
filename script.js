@@ -34,11 +34,11 @@ loadJSON = function() {
 
 loadInstagramData = function() {
 	var iterations = 0;
-	instagramData.forEach(function(element) {
+	instagramData[0].forEach(function(element) {
 		iterations += 1;
 	});
 
-	var index = getRandomInt(iterations);
+	var index = getRandomInt(iterations)+1;
 
 	console.log(iterations);
 	console.log(index);
