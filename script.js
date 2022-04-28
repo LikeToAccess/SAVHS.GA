@@ -191,7 +191,7 @@ function listenForSpinKeys(spinKeyCodes) {
 listenForSpinKeys([82, 83]);
 
 // document.getElementById("random-instagram-image").setAttribute("src", "https://savhs.ga/savhsseniors2022/")
-console.log(loadInstagramData);
+console.log(loadInstagramData());
 
 
 
