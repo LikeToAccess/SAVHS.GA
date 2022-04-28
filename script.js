@@ -44,7 +44,8 @@ loadInstagramData = function() {
 	console.log(index);
 	console.log(instagramData[0][index]);
 
-	// document.getElementById("random-instagram-image").setAttribute("src", "https://savhs.ga/savhsseniors2022/")
+	document.getElementById("random-instagram-image").setAttribute("src", "https://savhs.ga/savhsseniors2022/"+instagramData[0][index][0])
+	document.getElementById("random-instagram-text").innerText(instagramData[0][index][1])
 	return instagramData[0][index];
 }
 
