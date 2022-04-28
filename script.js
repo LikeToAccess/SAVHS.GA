@@ -40,6 +40,7 @@ loadInstagramData = function() {
 
 	var index = getRandomInt(iterations);
 
+	console.log(iterations);
 	console.log(index);
 	return instagramData[index];
 }
