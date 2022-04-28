@@ -177,37 +177,37 @@ function listenForSpinKeys(spinKeyCodes) {
 
 listenForSpinKeys([82, 83]);
 
-function streamVideo(videoFilename) {
-	var stream = new FileStream(videoFilename, FileMode.Open, FileAccess.Read , FileShare.Read);
+// function streamVideo(videoFilename) {
+// 	var stream = new FileStream(videoFilename, FileMode.Open, FileAccess.Read , FileShare.Read);
 
-	// var mediaType = MediaTypeHeaderValue.Parse($"video/{videoFormat}");
-	mediaType = MediaTypeHeaderValue.Parse("video/mp4")
+// 	// var mediaType = MediaTypeHeaderValue.Parse($"video/{videoFormat}");
+// 	mediaType = MediaTypeHeaderValue.Parse("video/mp4")
 
-	if (Request.Headers.Range != null)
-	{
-		try
-		{
-			var partialResponse = Request.CreateResponse(HttpStatusCode.PartialContent);
-			partialResponse.Content = new ByteRangeStreamContent(stream, Request.Headers.Range, mediaType);
+// 	if (Request.Headers.Range != null)
+// 	{
+// 		try
+// 		{
+// 			var partialResponse = Request.CreateResponse(HttpStatusCode.PartialContent);
+// 			partialResponse.Content = new ByteRangeStreamContent(stream, Request.Headers.Range, mediaType);
 
-			return partialResponse;
-		}
-		catch (InvalidByteRangeException invalidByteRangeException)
-		{
-			return Request.CreateErrorResponse(invalidByteRangeException);
-		}
-	}
-	else
-	{
-		// If it is not a range request we just send the whole thing as normal
-		var fullResponse = Request.CreateResponse(HttpStatusCode.OK);
+// 			return partialResponse;
+// 		}
+// 		catch (InvalidByteRangeException invalidByteRangeException)
+// 		{
+// 			return Request.CreateErrorResponse(invalidByteRangeException);
+// 		}
+// 	}
+// 	else
+// 	{
+// 		// If it is not a range request we just send the whole thing as normal
+// 		var fullResponse = Request.CreateResponse(HttpStatusCode.OK);
 
-		fullResponse.Content = new StreamContent(stream);
-		fullResponse.Content.Headers.ContentType = mediaType;
+// 		fullResponse.Content = new StreamContent(stream);
+// 		fullResponse.Content.Headers.ContentType = mediaType;
 
-		return fullResponse;
-	}
-}
+// 		return fullResponse;
+// 	}
+// }
 
 // streamVideo("video.mp4");
 
