@@ -42,7 +42,10 @@ loadInstagramData = function() {
 
 	console.log(iterations);
 	console.log(index);
-	return instagramData[index];
+	console.log(instagramData[0][index]);
+
+	// document.getElementById("random-instagram-image").setAttribute("src", "https://savhs.ga/savhsseniors2022/")
+	return instagramData[0][index];
 }
 
 loadLunch = function() {
@@ -194,7 +197,6 @@ function listenForSpinKeys(spinKeyCodes) {
 
 listenForSpinKeys([82, 83]);
 
-// document.getElementById("random-instagram-image").setAttribute("src", "https://savhs.ga/savhsseniors2022/")
 
 
 
