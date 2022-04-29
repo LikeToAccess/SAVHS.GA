@@ -1,4 +1,4 @@
-var instagramData = 
+var seniorSurvey =
 [
     [
         {

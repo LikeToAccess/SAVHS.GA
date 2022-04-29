@@ -72,7 +72,7 @@ def append_json_file(filename, data, encoding="utf8"):
 
 def reformat_json_to_js(filename, encoding="utf8"):
 	json_text = read_file(filename)
-	js_text = "var instagramData = \n" + json_text + ";"
+	js_text = "var seniorSurvey = \n" + json_text + ";"
 	write_file(filename + ".js", js_text, encoding=encoding)
 
 def finalize(filename):
