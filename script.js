@@ -140,10 +140,9 @@ function onSignIn(googleUser) {
 		document.getElementById("container").removeAttribute("hidden");
 	}
 
-	console.log(name.slice(email.replace("@isd282.org", "").length - 4));
-	console.log(email.slice(email.length - 11));
+	console.log(email.replace("@isd282.org", "").slice(email.replace("@isd282.org", "").length - 4));
 
-	if (!isNaN(name.slice(email.replace("@isd282.org", "").length - 4)) && email.slice(email.length - 11) == "@isd282.org") {
+	if (!isNaN(name.slice(email.replace("@isd282.org", "").replace("@isd282.org", "").length - 4)) && email.slice(email.length - 11) == "@isd282.org") {
 		var discordNavLink = document.getElementById("discord-nav-link");
 		discordNavLink.setAttribute("class", "nav-link");
 		discordNavLink.removeAttribute("title");
