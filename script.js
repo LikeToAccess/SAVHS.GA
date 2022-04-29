@@ -145,6 +145,9 @@ function onSignIn(googleUser) {
 	discordNavLink.parentElement.setAttribute("class", "nav-item");
 	discordNavLink.setAttribute("href", "https://discord.gg/BAcDKa3j3j");
 
+	var salaryNavLink = document.getElementById("salary-nav-link").parentElement;
+	salaryNavLink.removeAttribute("hidden");
+
 	var loginLink = document.getElementById("login-link");
 	loginLink.setAttribute("class", "grey disabled");
 	loginLink.setAttribute("title", "Already logged in.");
