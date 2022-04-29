@@ -32,6 +32,16 @@ loadJSON = function() {
 	});
 }
 
+function loadSeniorSurveyData() {
+	var iterations = 0;
+	seniorSurvey[0].forEach(function(element) {
+		iterations += 1;
+	});
+
+	console.log(seniorSurvey[0].length);
+	console.log(iterations);
+}
+
 function loadInstagramData(spins=0) {
 	var iterations = 0;
 	instagramData[0].forEach(function(element) {
@@ -73,16 +83,6 @@ function loadInstagramData(spins=0) {
 			return instagramData[0][index];
 		}
 	});
-}
-
-loadSeniorSurveyData = function() {
-	var iterations = 0;
-	seniorSurvey[0].forEach(function(element) {
-		iterations += 1;
-	});
-
-	console.log(seniorSurvey[0].length);
-	console.log(iterations);
 }
 
 loadLunch = function() {
