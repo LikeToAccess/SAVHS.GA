@@ -50,10 +50,13 @@ loadInstagramData = function() {
 	linked_handle.setAttribute("style", "font-size: inherit; color: inherit;");
 	linked_handle.setAttribute("target", "_blank");
 	linked_handle.innerText = "@" + text.split("@")[1];
-	text.appendChild(linked_handle);
 
-	document.getElementById("random-instagram-image").setAttribute("src", "https://savhs.ga/savhsseniors2022/"+instagramData[0][index][0]["image_filename"])
-	document.getElementById("random-instagram-text").innerText = text.split("@")[0]
+	randomInstagramImage = document.getElementById("random-instagram-image")
+	randomInstagramText = document.getElementById("random-instagram-text")
+
+	randomInstagramImage.setAttribute("src", "https://savhs.ga/savhsseniors2022/"+instagramData[0][index][0]["image_filename"])
+	randomInstagramText.innerText = text.split("@")[0]
+	randomInstagramText.appendChild(linked_handle);
 	return instagramData[0][index];
 }
 
