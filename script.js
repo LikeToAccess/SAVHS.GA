@@ -211,8 +211,8 @@ function spinWebsite(spins) {
 	// await sleep(1000);
 	// spin.removeAttribute("class");
 	document.body.setAttribute("style", "overflow: hidden;");
-	document.getElementById("spin").style.transform = "rotate(" + 360 * spins + "deg)";
-	setTimeout(() => {document.body.removeAttribute("style")}, 1000);
+	document.getElementById("spin").style.transform = "rotate("+ 360 * spins +"deg)";
+	setTimeout(() => {document.body.setAttribute("style", "transform: rotate("+ 360 * spins +"deg);")}, 1000);
 	// console.log("Removing style...");
 	// document.body.removeAttribute("style");
 }
