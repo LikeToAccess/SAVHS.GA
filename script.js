@@ -37,8 +37,9 @@ function loadSeniorSurveyData() {
 
 	question1 = document.getElementById("question-1");
 	question2 = document.getElementById("question-2");
-	console.log(seniorSurvey[0][0]["Describe High School in one word?"]);
-	question1.innerText = seniorSurvey[0]["Describe High School in one word?"][0];
+	question1NumberOfResponses = seniorSurvey[0][0]["Describe High School in one word?"].length;
+	question1Response = seniorSurvey[0][0]["Describe High School in one word?"][getRandomInt(question1NumberOfResponses)]
+	question1.innerText = "Describe High School in one word?"+ question1Response[0] + ;
 }
 
 function loadInstagramData(spins=0) {
