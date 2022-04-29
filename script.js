@@ -47,6 +47,9 @@ function loadSeniorSurveyData() {
 	propgateSurveyData(1, "Describe High School in one word?");
 	propgateSurveyData(2, "Advice for Freshmen?");
 	propgateSurveyData(3, "What are you sad about leaving behind?");
+	propgateSurveyData(4, "What is something you are looking forward to after high school?");
+	propgateSurveyData(5, "What was your favorite class or subject?");
+	propgateSurveyData(6, "What is one problem you see with the school system?");
 }
 
 function loadInstagramData(spins=0) {
