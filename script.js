@@ -44,7 +44,7 @@ function loadInstagramData(spins=0) {
 	var image_count = instagramData[0].length;
 	var index = getRandomInt(image_count);
 
-	console.log(instagramData[0][index]);
+	console.log(instagramData[0][index][0]);
 
 	var text = instagramData[0][index][0]["text"].replace("congrats!", "Congradulations!");
 	const linked_handle = document.createElement("a")
