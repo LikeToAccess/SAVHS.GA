@@ -114,18 +114,20 @@ function onSignIn(googleUser) {
 			"https://savhs.ga/"
 		].includes(window.location.href)
 	) {
-		displayAccountDetails(id, name, imageUrl, email);
-		var flapLink = document.getElementById("flap-link");
-		flapLink.removeAttribute("class");
-		flapLink.removeAttribute("title");
-		flapLink.parentElement.removeAttribute("class");
-		flapLink.setAttribute("href", "https://savhs.ga/flap/");
+		if (!isNaN(email.replace("@isd282.org", "").slice(email.replace("@isd282.org", "").length - 4)) && email.slice(email.length - 11) == "@isd282.org") {
+			displayAccountDetails(id, name, imageUrl, email);
+			var flapLink = document.getElementById("flap-link");
+			flapLink.removeAttribute("class");
+			flapLink.removeAttribute("title");
+			flapLink.parentElement.removeAttribute("class");
+			flapLink.setAttribute("href", "https://savhs.ga/flap/");
 
-		var discordLink = document.getElementById("discord-link");
-		discordLink.removeAttribute("class");
-		discordLink.removeAttribute("title");
-		discordLink.parentElement.removeAttribute("class");
-		discordLink.setAttribute("href", "https://discord.gg/BAcDKa3j3j");
+			var discordLink = document.getElementById("discord-link");
+			discordLink.removeAttribute("class");
+			discordLink.removeAttribute("title");
+			discordLink.parentElement.removeAttribute("class");
+			discordLink.setAttribute("href", "https://discord.gg/BAcDKa3j3j");
+		}
 	}
 	else if (
 		[
@@ -133,11 +135,13 @@ function onSignIn(googleUser) {
 			"https://savhs.ga/flap/"
 		].includes(window.location.href)
 	) {
-		// displayAccountDetails(id, name, imageUrl, email);
-		// console.log("TEST");
-		document.getElementById("flap-h1").innerText = "Flap Bird";
-		document.getElementById("flap-p").removeAttribute("hidden");
-		document.getElementById("container").removeAttribute("hidden");
+		if (!isNaN(email.replace("@isd282.org", "").slice(email.replace("@isd282.org", "").length - 4)) && email.slice(email.length - 11) == "@isd282.org") {
+			// displayAccountDetails(id, name, imageUrl, email);
+			// console.log("TEST");
+			document.getElementById("flap-h1").innerText = "Flap Bird";
+			document.getElementById("flap-p").removeAttribute("hidden");
+			document.getElementById("container").removeAttribute("hidden");
+		}
 	}
 
 	// console.log(email.replace("@isd282.org", "").slice(email.replace("@isd282.org", "").length - 4));
