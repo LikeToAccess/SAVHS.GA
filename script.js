@@ -38,7 +38,7 @@ loadInstagramData = function() {
 		iterations += 1;
 	});
 
-	var index = getRandomInt(iterations)+1;
+	var index = getRandomInt(iterations);
 
 	console.log(iterations);
 	console.log(index);
