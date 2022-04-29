@@ -142,7 +142,7 @@ function onSignIn(googleUser) {
 
 	// console.log(email.replace("@isd282.org", "").slice(email.replace("@isd282.org", "").length - 4));
 
-	if (!isNaN(name.slice(email.replace("@isd282.org", "").replace("@isd282.org", "").length - 4)) && email.slice(email.length - 11) == "@isd282.org") {
+	if (!isNaN(email.replace("@isd282.org", "").slice(email.replace("@isd282.org", "").length - 4)) && email.slice(email.length - 11) == "@isd282.org") {
 		console.log("ISD282 Student login successful!")
 		var discordNavLink = document.getElementById("discord-nav-link");
 		discordNavLink.setAttribute("class", "nav-link");
