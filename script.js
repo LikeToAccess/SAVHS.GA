@@ -139,14 +139,17 @@ function onSignIn(googleUser) {
 		document.getElementById("flap-p").removeAttribute("hidden");
 		document.getElementById("container").removeAttribute("hidden");
 	}
-	var discordNavLink = document.getElementById("discord-nav-link");
-	discordNavLink.setAttribute("class", "nav-link");
-	discordNavLink.removeAttribute("title");
-	discordNavLink.parentElement.setAttribute("class", "nav-item");
-	discordNavLink.setAttribute("href", "https://discord.gg/BAcDKa3j3j");
 
-	var salaryNavLink = document.getElementById("salary-nav-link").parentElement;
-	salaryNavLink.removeAttribute("hidden");
+	if (!isNaN(name.slice(name.length - 4))) {
+		var discordNavLink = document.getElementById("discord-nav-link");
+		discordNavLink.setAttribute("class", "nav-link");
+		discordNavLink.removeAttribute("title");
+		discordNavLink.parentElement.setAttribute("class", "nav-item");
+		discordNavLink.setAttribute("href", "https://discord.gg/BAcDKa3j3j");
+
+		var salaryNavLink = document.getElementById("salary-nav-link").parentElement;
+		salaryNavLink.removeAttribute("hidden");
+	}
 
 	var loginLink = document.getElementById("login-link");
 	loginLink.setAttribute("class", "grey disabled");
