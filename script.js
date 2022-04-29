@@ -48,7 +48,7 @@ loadInstagramData = function() {
 	const linked_handle = document.createElement("a")
 	linked_handle.setAttribute("href", "https://instagram.com/"+text.split("@")[1]);
 	linked_handle.setAttribute("style", "font-size: inherit; color: inherit;");
-	linked_handle.setAttribure("target", "_blank");
+	linked_handle.setAttribute("target", "_blank");
 	linked_handle.innerText = "@" + text.split("@")[1];
 	text.appendChild(linked_handle);
 
