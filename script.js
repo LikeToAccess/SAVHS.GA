@@ -37,7 +37,7 @@ function loadSeniorSurveyData() {
 
 	question1 = document.getElementById("question-1");
 	question2 = document.getElementById("question-2");
-	console.log(seniorSurvey[0]["Describe High School in one word?"]);
+	console.log(seniorSurvey[0]);
 	question1.innerText = seniorSurvey[0]["Describe High School in one word?"][0];
 }
 
