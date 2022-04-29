@@ -75,6 +75,16 @@ function loadInstagramData(spins=0) {
 	});
 }
 
+loadSeniorSurveyData = function() {
+	var iterations = 0;
+	seniorSurvey[0].forEach(function(element) {
+		iterations += 1;
+	});
+
+	console.log(seniorSurvey[0].length);
+	console.log(iterations);
+}
+
 loadLunch = function() {
 	var today = new Date();
 	var dd = String(today.getDate()).padStart(2, '0');
