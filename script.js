@@ -44,7 +44,7 @@ loadInstagramData = function() {
 	console.log(index);
 	console.log(instagramData[0][index]);
 
-	var text = instagramData[0][index][0]["text"];
+	var text = instagramData[0][index][0]["text"].replace("congrats!", "Congradulations!");
 	const linked_handle = document.createElement("a")
 	linked_handle.setAttribute("href", "https://instagram.com/"+text.split("@")[1]);
 	linked_handle.setAttribute("style", "font-size: inherit; color: inherit;");
@@ -55,6 +55,7 @@ loadInstagramData = function() {
 	randomInstagramText = document.getElementById("random-instagram-text")
 
 	randomInstagramImage.setAttribute("src", "https://savhs.ga/savhsseniors2022/"+instagramData[0][index][0]["image_filename"])
+	randomInstagramImage.parentElement.setAttribute("src", "https://savhs.ga/savhsseniors2022/"+instagramData[0][index][0]["image_filename"])
 	randomInstagramText.innerText = text.split("@")[0]
 	randomInstagramText.appendChild(linked_handle);
 	return instagramData[0][index];
