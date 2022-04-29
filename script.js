@@ -52,7 +52,7 @@ loadInstagramData = function() {
 	linked_handle.innerText = "@" + text.split("@")[1];
 
 	randomInstagramImage = document.getElementById("random-instagram-image")
-	randomInstagramText = document.getElementById("random-instagram-text")
+	randomInstagramText  = document.getElementById("random-instagram-text")
 
 	randomInstagramImage.setAttribute("src", "https://savhs.ga/savhsseniors2022/"+instagramData[0][index][0]["image_filename"])
 	randomInstagramImage.parentElement.setAttribute("href", "https://instagram.com/"+text.split("@")[1])
@@ -61,6 +61,16 @@ loadInstagramData = function() {
 	randomInstagramText.innerText = text.split("@")[0]
 	randomInstagramText.appendChild(linked_handle);
 	return instagramData[0][index];
+
+	var spinKeyCodes = [82, 83];
+	var spins = 0;
+	document.addEventListener("keydown", function(event) {
+		if (spinKeyCodes.includes(event.keyCode)) {
+			spins++;
+			spinWebsite(spins);
+			loadInstagramData();
+		}
+	});
 }
 
 loadLunch = function() {
@@ -204,13 +214,12 @@ function listenForSpinKeys(spinKeyCodes) {
 	document.addEventListener("keydown", function(event) {
 		if (spinKeyCodes.includes(event.keyCode)) {
 			spins++;
-			// if (spins > 100) {spins += spins}
 			spinWebsite(spins);
 		}
 	});
 }
 
-listenForSpinKeys([82, 83]);
+listenForSpinKeys([82]);
 
 
 
