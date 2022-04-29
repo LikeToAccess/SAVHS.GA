@@ -84,6 +84,7 @@ function loadInstagramData(spins=0) {
 			spins++;
 			spinWebsite(spins);
 			loadInstagramData(spins);
+			loadSeniorSurveyData();
 			return instagramData[0][index];
 		}
 	});
