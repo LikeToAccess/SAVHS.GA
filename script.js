@@ -60,6 +60,8 @@ loadInstagramData = function(spins=0) {
 	randomInstagramImage.parentElement.setAttribute("title", "@"+text.split("@")[1]);
 	randomInstagramText.innerText = text.split("@")[0]
 	randomInstagramText.appendChild(linked_handle);
+	if spins !== 0:
+		return instagramData[0][index];
 
 	var spinKeyCodes = [82, 83];
 	document.addEventListener("keydown", function(event) {
