@@ -60,7 +60,6 @@ loadInstagramData = function() {
 	randomInstagramImage.parentElement.setAttribute("title", "@"+text.split("@")[1]);
 	randomInstagramText.innerText = text.split("@")[0]
 	randomInstagramText.appendChild(linked_handle);
-	return instagramData[0][index];
 
 	var spinKeyCodes = [82, 83];
 	var spins = 0;
@@ -71,6 +70,8 @@ loadInstagramData = function() {
 			loadInstagramData();
 		}
 	});
+
+	return instagramData[0][index];
 }
 
 loadLunch = function() {
@@ -215,6 +216,14 @@ function listenForSpinKeys(spinKeyCodes) {
 		if (spinKeyCodes.includes(event.keyCode)) {
 			spins++;
 			spinWebsite(spins);
+			// if (
+			// 		[
+			// 			"https://savhs.ga/seniors/2022/",
+			// 			"https://www.savhs.ga/seniors/2022/"
+			// 		].includes(window.location.href)
+			// 	) {
+			// 		loadInstagramData();
+			// }
 		}
 	});
 }
