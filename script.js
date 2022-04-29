@@ -32,7 +32,7 @@ loadJSON = function() {
 	});
 }
 
-loadInstagramData = function(spins=0) {
+function loadInstagramData(spins=0) {
 	var iterations = 0;
 	instagramData[0].forEach(function(element) {
 		iterations += 1;
