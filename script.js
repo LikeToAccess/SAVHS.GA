@@ -216,7 +216,7 @@ function spinWebsite(spins) {
 	document.body.removeAttribute("style");
 }
 
-function listenForSpinKeys(spinKeyCodes) {
+async function listenForSpinKeys(spinKeyCodes) {
 	var spins = 0;
 	document.addEventListener("keydown", function(event) {
 		if (spinKeyCodes.includes(event.keyCode)) {
