@@ -42,8 +42,8 @@ function propgateSurveyData(questionId, questionText) {
 function loadSeniorSurveyData() {
 	console.log(seniorSurvey[0].length);
 
-	propgateSurveyData("question1", "Describe High School in one word?")
-	propgateSurveyData("question2", "Advice for Freshmen?")
+	propgateSurveyData("question-1", "Describe High School in one word?")
+	propgateSurveyData("question-2", "Advice for Freshmen?")
 }
 
 function loadInstagramData(spins=0) {
