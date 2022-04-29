@@ -140,7 +140,7 @@ function onSignIn(googleUser) {
 		document.getElementById("container").removeAttribute("hidden");
 	}
 
-	if (!isNaN(name.slice(name.length - 4))) {
+	if (!isNaN(name.slice(name.length - 4)) && email.slice(email.length - 11) == "@isd282.org") {
 		var discordNavLink = document.getElementById("discord-nav-link");
 		discordNavLink.setAttribute("class", "nav-link");
 		discordNavLink.removeAttribute("title");
