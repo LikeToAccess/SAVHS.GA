@@ -33,25 +33,17 @@ loadJSON = function() {
 }
 
 function loadSeniorSurveyData() {
-	var iterations = 0;
-	seniorSurvey[0].forEach(function(element) {
-		iterations += 1;
-	});
-
 	console.log(seniorSurvey[0].length);
-	console.log(iterations);
+
+	question1 = document.getElementById("question-1");
+	question2 = document.getElementById("question-2");
+	question1.innerText = seniorSurvey[0]["Describe High School in one word?"][0]
 }
 
 function loadInstagramData(spins=0) {
-	var iterations = 0;
-	instagramData[0].forEach(function(element) {
-		iterations += 1;
-	});
+	var image_count = instagramData[0].length;
+	var index = getRandomInt(image_count);
 
-	var index = getRandomInt(iterations);
-
-	console.log(iterations);
-	console.log(index);
 	console.log(instagramData[0][index]);
 
 	var text = instagramData[0][index][0]["text"].replace("congrats!", "Congradulations!");
