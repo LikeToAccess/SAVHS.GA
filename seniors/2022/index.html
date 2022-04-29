@@ -28,7 +28,7 @@
 	<title>Seniors 2022</title>
 </head>
 
-<body onload="loadInstagramData()" translate="no" id="spin">
+<body onload="loadInstagramData(); loadSeniorSurveyData();" translate="no" id="spin">
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="display: flex; justify-content: space-between;">
 		<!-- Brand/logo -->
 		<a class="navbar-brand" href="https://savhs.ga/">
@@ -89,7 +89,7 @@
 
 		<div style="text-align:center;" class="table-column">
 			<h2 id="random-instagram-text">Loading...</h2>
-			<div onload="loadSeniorSurveyData()">
+			<div>
 				<p style="float: right; padding-top: 1.6%; padding-right: 10%;" id="question-1">Sample Text</p>
 				<p style="float: left; padding-top: 1.6%; padding-left: 10%;" id="question-2">Sample Text</p>
 			</div>
