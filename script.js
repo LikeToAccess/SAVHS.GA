@@ -32,18 +32,21 @@ loadJSON = function() {
 	});
 }
 
-function propgateSurveyData(questionId, questionNumber, questionText) {
-	question = document.getElementById(questionId);
-	questionNumberOfResponses = seniorSurvey[0][questionNumber-1][questionText].length;
-	questionResponse = seniorSurvey[0][questionNumber-1][questionText][getRandomInt(questionNumberOfResponses)]
-	question.innerText = questionText +" \""+ questionResponse[0] +"\" - "+ questionResponse[1];
+function propgateSurveyData(questionNumber, questionText) {
+	question = document.getElementById("question-"+ questionNumber);
+	response = document.getElementById("response-"+ questionNumber);
+	numberOfResponses = seniorSurvey[0][questionNumber-1][questionText].length;
+	responseText = seniorSurvey[0][questionNumber-1][questionText][getRandomInt(numberOfResponses)];
+	question.innerText = questionText;
+	response.innerText = "\""+ responseText[0] +"\" - "+ responseText[1];
 }
 
 function loadSeniorSurveyData() {
 	console.log(seniorSurvey[0].length);
 
-	propgateSurveyData("question-1", 1, "Describe High School in one word?")
-	propgateSurveyData("question-2", 2, "Advice for Freshmen?")
+	propgateSurveyData(1, "Describe High School in one word?");
+	propgateSurveyData(2, "Advice for Freshmen?");
+	propgateSurveyData(3, "What are you sad about leaving behind?");
 }
 
 function loadInstagramData(spins=0) {
