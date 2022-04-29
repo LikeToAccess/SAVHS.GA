@@ -213,6 +213,7 @@ function spinWebsite(spins) {
 	document.body.setAttribute("style", "overflow: hidden;");
 	document.getElementById("spin").style.transform = "rotate(" + 360 * spins + "deg)";
 	sleep(1000);
+	console.log("Removing style...");
 	document.body.removeAttribute("style");
 }
 
