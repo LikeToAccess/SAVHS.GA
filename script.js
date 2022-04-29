@@ -210,9 +210,10 @@ function spinWebsite(spins) {
 	// spin.setAttribute("class", "spin");
 	// await sleep(1000);
 	// spin.removeAttribute("class");
-	// document.body.setAttribute("style", "overflow: hidden;")
+	document.body.setAttribute("style", "overflow: hidden;");
 	document.getElementById("spin").style.transform = "rotate(" + 360 * spins + "deg)";
-	// document.body.removeAttribute("style")
+	await sleep(1000);
+	document.body.removeAttribute("style");
 }
 
 function listenForSpinKeys(spinKeyCodes) {
