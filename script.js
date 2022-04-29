@@ -32,18 +32,18 @@ loadJSON = function() {
 	});
 }
 
-function propgateSurveyData(questionId, questionText) {
+function propgateSurveyData(questionId, questionNumber, questionText) {
 	question = document.getElementById(questionId);
-	questionNumberOfResponses = seniorSurvey[0][0][questionText].length;
-	questionResponse = seniorSurvey[0][0][questionText][getRandomInt(questionNumberOfResponses)]
+	questionNumberOfResponses = seniorSurvey[0][questionNumber-1][questionText].length;
+	questionResponse = seniorSurvey[0][questionNumber-1][questionText][getRandomInt(questionNumberOfResponses)]
 	question.innerText = questionText +" \""+ questionResponse[0] +"\" - "+ questionResponse[1];
 }
 
 function loadSeniorSurveyData() {
 	console.log(seniorSurvey[0].length);
 
-	propgateSurveyData("question-1", "Describe High School in one word?")
-	propgateSurveyData("question-2", "Advice for Freshmen?")
+	propgateSurveyData("question-1", 1, "Describe High School in one word?")
+	propgateSurveyData("question-2", 2, "Advice for Freshmen?")
 }
 
 function loadInstagramData(spins=0) {
