@@ -32,7 +32,7 @@ loadJSON = function() {
 	});
 }
 
-loadInstagramData = function() {
+loadInstagramData = function(spins=0) {
 	var iterations = 0;
 	instagramData[0].forEach(function(element) {
 		iterations += 1;
@@ -62,16 +62,14 @@ loadInstagramData = function() {
 	randomInstagramText.appendChild(linked_handle);
 
 	var spinKeyCodes = [82, 83];
-	var spins = 0;
 	document.addEventListener("keydown", function(event) {
 		if (spinKeyCodes.includes(event.keyCode)) {
 			spins++;
 			spinWebsite(spins);
-			loadInstagramData();
+			loadInstagramData(spins);
+			return instagramData[0][index];
 		}
 	});
-
-	return instagramData[0][index];
 }
 
 loadLunch = function() {
