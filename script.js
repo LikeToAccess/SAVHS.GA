@@ -140,10 +140,10 @@ function onSignIn(googleUser) {
 		document.getElementById("container").removeAttribute("hidden");
 	}
 
-	console.log(name.slice(name.length - 4));
+	console.log(name.slice(email.replace("@isd282.org", "").length - 4));
 	console.log(email.slice(email.length - 11));
 
-	if (!isNaN(name.slice(name.length - 4)) && email.slice(email.length - 11) == "@isd282.org") {
+	if (!isNaN(name.slice(email.replace("@isd282.org", "").length - 4)) && email.slice(email.length - 11) == "@isd282.org") {
 		var discordNavLink = document.getElementById("discord-nav-link");
 		discordNavLink.setAttribute("class", "nav-link");
 		discordNavLink.removeAttribute("title");
