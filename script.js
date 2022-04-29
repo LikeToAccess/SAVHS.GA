@@ -212,7 +212,7 @@ function spinWebsite(spins) {
 	// spin.removeAttribute("class");
 	document.body.setAttribute("style", "overflow: hidden;");
 	document.getElementById("spin").style.transform = "rotate(" + 360 * spins + "deg)";
-	await sleep(1000);
+	sleep(1000);
 	document.body.removeAttribute("style");
 }
 
