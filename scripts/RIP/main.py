@@ -98,28 +98,38 @@ def main():
 	profile = None
 	for profile in profiles:
 		print(profile)
-		# while not login_to_instagram():
-		# 	time.sleep(3)
-		# download_posts(profile)
-		remove_file("2022-03-19_06-15-57_UTC.png")
-		remove_file("2022-03-19_06-15-57_UTC.webp")
+
+		while not login_to_instagram():
+			time.sleep(3)
+		download_posts(profile)
+
+		remove_file("savhsseniors2022/2022-03-19_06-15-57_UTC.png")
+		remove_file("savhsseniors2022/2022-03-19_06-15-57_UTC.jpg")
+		remove_file("savhsseniors2022/2022-03-19_06-15-57_UTC.webp")
 
 		profile_images = []
 		for file in tqdm.tqdm(os.listdir(profile)):
 			profile_image = []
 			if file.endswith(".webp"):
-				os.system(f"{ffmpeg_binary} -i {profile}/{file} {profile}/{file.replace('.webp','.png')} -y -hide_banner -loglevel error")
-				if not os.path.exists(f"../../{profile}/"):
-					os.mkdir(f"../../{profile}/")
+				extension = ".webp"
+			elif file.endswith(".jpg"):
+				extension = ".jpg"
+			else:
+				# print("No jpg or webp images found!")
+				continue
+			os.system(f"{ffmpeg_binary} -i {profile}/{file} {profile}/{file.replace(extension,'.png')} -y -hide_banner -loglevel error")
+			if not os.path.exists(f"../../{profile}/"):
+				os.mkdir(f"../../{profile}/")
 
-				shutil.copyfile(f"{profile}/{file.replace('.webp','.png')}", f"../../{profile}/{file.replace('.webp','.png')}")
+			shutil.copyfile(f"{profile}/{file.replace(extension,'.png')}", f"../../{profile}/{file.replace(extension,'.png')}")
 
-				profile_image.append({
-					"image_filename": file.replace(".webp", ".png"),
-					"text":           read_file(profile+"/"+file.replace(".webp", ".txt")).strip("\n"),
-				})
+			profile_image.append({
+				"image_filename": file.replace(extension, ".png"),
+				"text":           read_file(profile+"/"+file.replace(extension, ".txt")).strip("\n"),
+			})
 
-				profile_images.append(profile_image)
+			# print(profile_image)
+			profile_images.append(profile_image)
 
 		remove_file(profile+".json")
 		append_json_file(f"{profile}.json", profile_images)
