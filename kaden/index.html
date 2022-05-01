@@ -6,6 +6,24 @@
 	<title>Top Ten Lacrosse Athletes</title>
 </head>
 <body>
-	<video src="https://savhs.ga/skype_video.mp4"></video>
+	<!-- <video id="video_muted" src="https://savhs.ga/skype_video.mp4" width="50%" autoplay muted loop></video> -->
+	<video autoplay muted id="myVideo" width="50%" loop>
+  		<source src="https://savhs.ga/skype_video.mp4" type="video/mp4">
+	</video>
+    <div id="audio-control" class="muted" style="float:right;">Unmute</div>
+    <style type="text/css">#audio-control{cursor:pointer}</style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+				$('#audio-control').click(function(){
+		    if( $("#myVideo").prop('muted') ) {
+		          $("#myVideo").prop('muted', false);
+		          $(this).text('Mute');
+		      // or toggle class, style it with a volume icon sprite, change background-position
+		    } else {
+		      $("#myVideo").prop('muted', true);
+		      $(this).text('Unmute');
+		    }
+		});
+	</script>
 </body>
 </html>
