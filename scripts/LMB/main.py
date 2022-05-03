@@ -27,14 +27,18 @@ from tqdm import tqdm
 from settings import *
 
 
+# May - 61c1e811534a13ab3dea1b37
+# April - 61c1e7e6534a136c3fea1b35
+
+
 links = [
-	"https://www.schoolnutritionandfitness.com/webmenus2/#/view-no-design?id=61c1e808534a139e3dea1b36&\
+	"https://www.schoolnutritionandfitness.com/webmenus2/#/view-no-design?id=61c1e811534a13ab3dea1b37&\
 menuType=610aacdb534a1367458b4683&siteCode=20001&showAllNutrients=false",  # Grab N Go
-	"https://www.schoolnutritionandfitness.com/webmenus2/#/view-no-design?id=61c1e82b534a131337ea1b3b&\
+	"https://www.schoolnutritionandfitness.com/webmenus2/#/view-no-design?id=61c1e833534a133643ea1b37&\
 menuType=6102de69534a13557755dde1&siteCode=20001&showAllNutrients=false",  # Grill Line
-	"https://www.schoolnutritionandfitness.com/webmenus2/#/view-no-design?id=61c1e84d534a13763fea1b3c&\
+	"https://www.schoolnutritionandfitness.com/webmenus2/#/view-no-design?id=61c1e854534a138e3dea1b38&\
 menuType=6102de5b534a13a26355ddef&siteCode=20001&showAllNutrients=false",  # Hot Sandwich Line
-	"https://www.schoolnutritionandfitness.com/webmenus2/#/view-no-design?id=61c1e7e6534a136c3fea1b35&\
+	"https://www.schoolnutritionandfitness.com/webmenus2/#/view-no-design?id=61c1e7ef534a13ab3dea1b36&\
 menuType=6102dd39534a13477155de0b&siteCode=20001&showAllNutrients=false",  # Daily Dish
 ]
 
@@ -204,7 +208,15 @@ class Scraper:
 			lunch[day_information[0]] = {
 				"lunch_items": lunch_items,
 				# "day":         day_information[1],
-				"menu_type":   menu
+				"menu_type":   menu.replace(
+					"SANB MSHS - Grab N Go", "Salad Bar"
+				).replace(
+					"SANB MSHS - Grill Line","Grill Line"
+				).replace(
+					"SANB MSHS - Hot Sandwich Line","Cook to Order"
+				).replace(
+					"SANB MSHS - Daily Dish","Main Line"
+				)
 			}
 
 		return lunch, menu
