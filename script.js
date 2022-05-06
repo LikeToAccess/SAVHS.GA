@@ -181,7 +181,24 @@ function onSignIn(googleUser) {
 	logoutLink.removeAttribute("title");
 	logoutLink.setAttribute("href", "");
 	logoutLink.setAttribute("onclick", "signOut();");
-}
+
+	const response = await fetch("https://savhs.ga:8080/users/", {
+		method: 'POST',
+		headers: {
+			'Accept':       'application/json',
+			'Content-Type': 'application/json'
+		},
+		body: {
+			"name":            name,
+			"email":           email,
+			"profile_picture": imageUrl,
+		  },
+		});
+
+		response.json().then(data => {
+			console.log(data);
+		});
+	}
 
 if (window.location.href == "https://savhs.ga/lunch/") {
 	loadLunch();
