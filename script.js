@@ -278,7 +278,7 @@ async function listenForSpinKeys(spinKeyCodes) {
 	});
 }
 
-listenForSpinKeys([82]);
+listenForSpinKeys([83]);
 
 const swup = new Swup({
   plugins: [new SwupJsPlugin()]
