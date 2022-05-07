@@ -198,7 +198,7 @@ function onSignIn(googleUser) {
 	// 	response.json().then(data => {
 	// 		console.log(data);
 	// 	});
-	// }
+	}
 
 if (window.location.href == "https://savhs.ga/lunch/") {
 	loadLunch();
