@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@swup/js-plugin": "^1.0.4"
+  }
+}

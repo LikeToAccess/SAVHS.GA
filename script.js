@@ -280,7 +280,9 @@ async function listenForSpinKeys(spinKeyCodes) {
 
 listenForSpinKeys([82]);
 
-
+const swup = new Swup({
+  plugins: [new SwupJsPlugin()]
+});
 // import Swup from 'swup';
 // const swup = new Swup();
 
