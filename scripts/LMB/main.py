@@ -15,6 +15,7 @@ import datetime
 import time
 import json
 import uuid
+from shutil import copyfile
 from selenium import webdriver
 from selenium.common.exceptions import *
 from selenium.webdriver.common.by import By
@@ -238,6 +239,7 @@ class Scraper:
 			else:
 				finalize(filename)
 				return
+
 		print("Opening URL")
 		for link in tqdm(links):
 			lunch, menu_type = self.get_lunch(link)
@@ -249,7 +251,10 @@ class Scraper:
 					append_json_file(filename, lunch[date.strftime("%#e")])
 			else:
 				append_json_file(filename, "['No Lunch Today']")
+
 		finalize(filename)
+		copyfile(filename+".js", "current.json.js")
+
 
 
 if __name__ == "__main__":
