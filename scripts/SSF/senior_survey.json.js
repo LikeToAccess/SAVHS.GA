@@ -1,4 +1,4 @@
-var seniorSurvey =
+var seniorSurvey = 
 [
     [
         {
@@ -126,6 +126,34 @@ var seniorSurvey =
                 [
                     "Tiring",
                     "Anonymous"
+                ],
+                [
+                    "Limiting",
+                    "Vincent"
+                ],
+                [
+                    "Meh",
+                    "Nolan Anderson"
+                ],
+                [
+                    "Dumb",
+                    "Caleb Cobian"
+                ],
+                [
+                    "I\u2019m not a senior",
+                    "Jamison Williams"
+                ],
+                [
+                    "Ball",
+                    "Anonymous"
+                ],
+                [
+                    "Adequate",
+                    "Aidan Connolly"
+                ],
+                [
+                    "Invaiding",
+                    "Antonique Stubblefield"
                 ]
             ]
         },
@@ -250,6 +278,34 @@ var seniorSurvey =
                 [
                     "Make a schedule every week",
                     "Anonymous"
+                ],
+                [
+                    "Don't",
+                    "Vincent"
+                ],
+                [
+                    "Don\u2019t care too much",
+                    "Nolan Anderson"
+                ],
+                [
+                    "Take all the stupid classes first",
+                    "Caleb Cobian"
+                ],
+                [
+                    "I\u2019m not a senior, but you should give up",
+                    "Jamison Williams"
+                ],
+                [
+                    "Ball",
+                    "Anonymous"
+                ],
+                [
+                    "Do your work, don\u2019t procrastinate",
+                    "Aidan Connolly"
+                ],
+                [
+                    "Get some bitches",
+                    "Antonique Stubblefield"
                 ]
             ]
         },
@@ -382,6 +438,34 @@ var seniorSurvey =
                 [
                     "Theater and speech",
                     "Anonymous"
+                ],
+                [
+                    "Peter Victorine",
+                    "Vincent"
+                ],
+                [
+                    "Nothing",
+                    "Nolan Anderson"
+                ],
+                [
+                    "Football",
+                    "Caleb Cobian"
+                ],
+                [
+                    "I\u2019m not a senior",
+                    "Jamison Williams"
+                ],
+                [
+                    "Ball",
+                    "Anonymous"
+                ],
+                [
+                    "Not getting more of a high-school experience",
+                    "Aidan Connolly"
+                ],
+                [
+                    "Miss Chronback",
+                    "Antonique Stubblefield"
                 ]
             ]
         },
@@ -506,6 +590,34 @@ var seniorSurvey =
                 [
                     "Game design, hypothetically ",
                     "Anonymous"
+                ],
+                [
+                    "No more middle school lunches",
+                    "Vincent"
+                ],
+                [
+                    "Free time",
+                    "Nolan Anderson"
+                ],
+                [
+                    "Building rockets",
+                    "Caleb Cobian"
+                ],
+                [
+                    "I\u2019m not a senior",
+                    "Jamison Williams"
+                ],
+                [
+                    "No anxious last week of the quarter",
+                    "Aidan Hillesheim"
+                ],
+                [
+                    "Starting to persue something that I actually care about",
+                    "Aidan Connolly"
+                ],
+                [
+                    "College",
+                    "Antonique Stubblefield"
                 ]
             ]
         },
@@ -634,6 +746,34 @@ var seniorSurvey =
                 [
                     "Sophomore year chamber choir, the community and activities were so fun",
                     "Anonymous"
+                ],
+                [
+                    "Prep",
+                    "Vincent"
+                ],
+                [
+                    "Shop",
+                    "Nolan Anderson"
+                ],
+                [
+                    "APUSH (with MacLeod and Patrick)",
+                    "Caleb Cobian"
+                ],
+                [
+                    "I\u2019m not a senior",
+                    "Jamison Williams"
+                ],
+                [
+                    "AP Physics",
+                    "Aidan Hillesheim"
+                ],
+                [
+                    "Engineering",
+                    "Aidan Connolly"
+                ],
+                [
+                    "Government and Mythology",
+                    "Antonique Stubblefield"
                 ]
             ]
         },
@@ -686,6 +826,34 @@ var seniorSurvey =
                 [
                     "The facility and administration change things rapidly without listening to the student body.",
                     "Anonymous"
+                ],
+                [
+                    "Homework",
+                    "Vincent"
+                ],
+                [
+                    "All of it",
+                    "Nolan Anderson"
+                ],
+                [
+                    "It doesn\u2019t accurately prepare you for real-life scenarios",
+                    "Anonymous"
+                ],
+                [
+                    "I\u2019m not a senior",
+                    "Jamison Williams"
+                ],
+                [
+                    "There is not enough student involvement in changes in the system",
+                    "Aidan Hillesheim"
+                ],
+                [
+                    "The american school system in general sucks",
+                    "Aidan Connolly"
+                ],
+                [
+                    "No open lunch",
+                    "Antonique Stubblefield"
                 ]
             ]
         }
