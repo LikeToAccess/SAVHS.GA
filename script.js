@@ -294,7 +294,6 @@ function loadQuotesData() {
 	for (let i = 0; i < 6; i++) {
 		propgateSurveyData(i);
 	}
-	
 }
 
 // const swup = new Swup({
