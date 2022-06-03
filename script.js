@@ -302,6 +302,20 @@ function loadQuotesData() {
 	}
 }
 
+const formElement = document.getElementById("form-id");
+formElement.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const formData = new FormData(formElement).entries()
+    const response = await fetch("https://reqres.in/api/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(formData))
+    });
+
+    const result = await response.json();
+    console.log(result)
+});
+
 // const swup = new Swup({
 //   plugins: [new SwupJsPlugin()]
 // });
