@@ -284,6 +284,7 @@ function propgateQuotesData(quoteNumber) {
 	var name = document.getElementById("name-"+ quoteNumber);
 	var quote = document.getElementById("quote-"+ quoteNumber);
 	// responseText = seniorSurvey[0][quoteNumber-1][quoteText][getRandomInt(numberOfResponses)];
+	console.log(quotes);
 	name.innerText = quotes[quoteNumber];
 	// quote.innerText = "\""+ responseText[0] +"\"";
 }
