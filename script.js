@@ -280,18 +280,21 @@ async function listenForSpinKeys(spinKeyCodes) {
 
 listenForSpinKeys([83]);
 
-function propgateQuotesData(quoteNumber, quoteText) {
+function propgateQuotesData(quoteNumber) {
 	var name = document.getElementById("name-"+ quoteNumber);
 	var quote = document.getElementById("quote-"+ quoteNumber);
 	numberOfResponses = quotes.length;
 	// responseText = seniorSurvey[0][quoteNumber-1][quoteText][getRandomInt(numberOfResponses)];
 	console.log(numberOfResponses);
-	name.innerText = quoteText;
-	quote.innerText = "\""+ responseText[0] +"\"";
+	// name.innerText = quoteText;
+	// quote.innerText = "\""+ responseText[0] +"\"";
 }
 
 function loadQuotesData() {
-	propgateSurveyData(null, null);
+	for (let i = 0; i < 6; i++) {
+		propgateSurveyData(i);
+	}
+	
 }
 
 // const swup = new Swup({
