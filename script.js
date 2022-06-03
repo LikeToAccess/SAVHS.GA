@@ -283,6 +283,7 @@ listenForSpinKeys([83]);
 function propgateQuotesData(quoteNumber) {
 	var name = document.getElementById("name-"+ quoteNumber);
 	var quote = document.getElementById("quote-"+ quoteNumber);
+	var card = document.getElementById("card-"+ quoteNumber);
 	// responseText = seniorSurvey[0][quoteNumber-1][quoteText][getRandomInt(numberOfResponses)];
 	// console.log(quotes);
 	if (name && quote) {
@@ -290,7 +291,7 @@ function propgateQuotesData(quoteNumber) {
 		name.setAttribute("class", "");
 		quote.innerText = "\""+ quotes[quoteNumber-1]["quote"] +"\"";
 		quote.setAttribute("class", "smalltext");
-		name.parentNode.parentNode.parentNode.removeAttribute("hidden");
+		card.removeAttribute("hidden");
 	}
 }
 
