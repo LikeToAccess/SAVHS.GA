@@ -287,7 +287,9 @@ function propgateQuotesData(quoteNumber) {
 	// console.log(quotes);
 	if (name && quote) {
 		name.innerText = quotes[quoteNumber-1]["name"];
+		name.setAttribute("class", "");
 		quote.innerText = "\""+ quotes[quoteNumber-1]["quote"] +"\"";
+		quote.setAttribute("class", "smalltext");
 	}
 }
 
