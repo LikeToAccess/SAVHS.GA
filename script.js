@@ -285,14 +285,14 @@ function propgateQuotesData(quoteNumber) {
 	var quote = document.getElementById("quote-"+ quoteNumber);
 	// responseText = seniorSurvey[0][quoteNumber-1][quoteText][getRandomInt(numberOfResponses)];
 	console.log(quotes);
-	name.innerText = quotes[quoteNumber];
-	// quote.innerText = "\""+ responseText[0] +"\"";
+	name.innerText = quotes[quoteNumber]["name"];
+	quote.innerText = "\""+ quotes[quoteNumber]["quote"] +"\"";
 }
 
 function loadQuotesData() {
 	numberOfResponses = quotes.length;
 	console.log(numberOfResponses);
-	for (let i = 1; i < numberOfResponses; i++) {
+	for (let i = 1; i < numberOfResponses + 1; i++) {
 		propgateQuotesData(i);
 	}
 }
