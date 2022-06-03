@@ -292,7 +292,7 @@ function propgateQuotesData(quoteNumber) {
 
 function loadQuotesData() {
 	for (let i = 0; i < 6; i++) {
-		propgateSurveyData(i);
+		propgateQuotesData(i);
 	}
 }
 
