@@ -291,7 +291,7 @@ function propgateQuotesData(quoteNumber) {
 function loadQuotesData() {
 	numberOfResponses = quotes.length;
 	console.log(numberOfResponses);
-	for (let i = 0; i < numberOfResponses; i++) {
+	for (let i = 1; i < numberOfResponses; i++) {
 		propgateQuotesData(i);
 	}
 }
