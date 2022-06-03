@@ -10,7 +10,7 @@ var quotes =
         "email": "nicholasludford2022@isd282.org",
         "name": "Nicholas Ludford",
         "profile_picture": null,
-        "quote": "Nick!?"
+        "quote": "Just testing..."
     },
     {
         "email": "calebcobian2022@isd282.org",
