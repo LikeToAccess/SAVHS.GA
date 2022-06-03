@@ -132,7 +132,7 @@ class Sample(Resource):
 def main():
 	api.add_resource(Quotes, "/quotes")
 	api.add_resource(Sample, "/sample")
-	serve(app, host="0.0.0.0", port=8080)
+	serve(app, host="192.168.50.99", port=8080)
 	# app.run()
 
 
