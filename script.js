@@ -290,6 +290,7 @@ function propgateQuotesData(quoteNumber) {
 		name.setAttribute("class", "");
 		quote.innerText = "\""+ quotes[quoteNumber-1]["quote"] +"\"";
 		quote.setAttribute("class", "smalltext");
+		name.parentNode.parentNode.parentNode.removeAttribute("hidden");
 	}
 }
 
