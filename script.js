@@ -283,16 +283,16 @@ listenForSpinKeys([83]);
 function propgateQuotesData(quoteNumber) {
 	var name = document.getElementById("name-"+ quoteNumber);
 	var quote = document.getElementById("quote-"+ quoteNumber);
-	numberOfResponses = quotes.length;
 	// responseText = seniorSurvey[0][quoteNumber-1][quoteText][getRandomInt(numberOfResponses)];
-	console.log(numberOfResponses);
-	// name.innerText = quoteText;
+	name.innerText = quotes[quoteNumber];
 	// quote.innerText = "\""+ responseText[0] +"\"";
 }
 
 function loadQuotesData() {
-	for (let i = 0; i < 6; i++) {
-		propgateQuotesData(i);
+	numberOfResponses = quotes.length;
+	console.log(numberOfResponses);
+	for (let i = 0; i < numberOfResponses; i++) {
+		propgateSurveyData(i);
 	}
 }
 
