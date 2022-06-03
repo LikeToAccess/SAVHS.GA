@@ -292,7 +292,7 @@ function loadQuotesData() {
 	numberOfResponses = quotes.length;
 	console.log(numberOfResponses);
 	for (let i = 0; i < numberOfResponses; i++) {
-		propgateSurveyData(i);
+		propgateQuotesData(i);
 	}
 }
 
