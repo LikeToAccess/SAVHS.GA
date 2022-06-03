@@ -284,9 +284,11 @@ function propgateQuotesData(quoteNumber) {
 	var name = document.getElementById("name-"+ quoteNumber);
 	var quote = document.getElementById("quote-"+ quoteNumber);
 	// responseText = seniorSurvey[0][quoteNumber-1][quoteText][getRandomInt(numberOfResponses)];
-	console.log(quotes);
-	name.innerText = quotes[quoteNumber-1]["name"];
-	quote.innerText = "\""+ quotes[quoteNumber-1]["quote"] +"\"";
+	// console.log(quotes);
+	if (name && quote) {
+		name.innerText = quotes[quoteNumber-1]["name"];
+		quote.innerText = "\""+ quotes[quoteNumber-1]["quote"] +"\"";
+	}
 }
 
 function loadQuotesData() {
