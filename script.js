@@ -182,22 +182,20 @@ function onSignIn(googleUser) {
 	logoutLink.setAttribute("href", "");
 	logoutLink.setAttribute("onclick", "signOut();");
 
-	// const response = await fetch("https://savhs.ga:8080/users/", {
-	// 	method: 'POST',
-	// 	headers: {
-	// 		'Accept':       'application/json',
-	// 		'Content-Type': 'application/json'
-	// 	},
-	// 	body: {
-	// 		"name":            name,
-	// 		"email":           email,
-	// 		"profile_picture": imageUrl,
-	// 	  },
-	// 	});
+	const formElement = document.getElementById("form-id");
+	formElement.addEventListener("submit", async function (e) {
+		e.preventDefault();
+		const formData = new FormData(formElement).entries()
+		quote = formData["quote"]
+		const response = await fetch("http://api.savhs.ga:8080/quotes?email="+ email +"&name="+ name +"&quote="+ quote +"&profile_picture="+ imageUrl, {
+			method: "POST"
+			// headers: { "Content-Type": "application/json" },
+			// body: JSON.stringify(Object.fromEntries(formData))
+		});
 
-	// 	response.json().then(data => {
-	// 		console.log(data);
-	// 	});
+		const result = await response.json();
+		console.log(result)
+	});
 	}
 
 if (window.location.href == "https://savhs.ga/lunch/") {
@@ -302,19 +300,6 @@ function loadQuotesData() {
 	}
 }
 
-const formElement = document.getElementById("form-id");
-formElement.addEventListener("submit", async function (e) {
-    e.preventDefault();
-    const formData = new FormData(formElement).entries()
-    const response = await fetch("https://reqres.in/api/users", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(formData))
-    });
-
-    const result = await response.json();
-    console.log(result)
-});
 
 // const swup = new Swup({
 //   plugins: [new SwupJsPlugin()]
