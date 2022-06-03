@@ -233,12 +233,13 @@ class Scraper:
 		filename = date.strftime(logs_folder_name + "/LD_%Y-%m-%d.json")
 
 		full_month_lunch_schedule = {}
-		if os.path.exists(filename):
-			if len(read_json_file(filename)) != 4:
-				remove_file(filename)
-			else:
-				finalize(filename)
-				return
+		# if os.path.exists(filename):
+		# 	if len(read_json_file(filename)) != 4:
+		# 		remove_file(filename)
+		# 	else:
+		# 		finalize(filename)
+		# 		return
+		remove_file(filename)
 
 		print("Opening URL")
 		for link in tqdm(links):
