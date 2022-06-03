@@ -291,7 +291,7 @@ function propgateQuotesData(quoteNumber, quoteText) {
 }
 
 function loadQuotesData() {
-
+	propgateSurveyData(null, null);
 }
 
 // const swup = new Swup({
