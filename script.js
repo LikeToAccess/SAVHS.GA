@@ -185,9 +185,7 @@ function onSignIn(googleUser) {
 	const formElement = document.getElementById("form-id");
 	formElement.addEventListener("submit", async function (e) {
 		e.preventDefault();
-		const formData = new FormData(formElement).entries()
-		console.log(formData);
-		quote = formData["quote"]
+		quote = document.getElementById("quote-id").value;
 		const response = await fetch("http://api.savhs.ga:8080/quotes?email="+ email +"&name="+ name +"&quote="+ quote +"&profile_picture="+ imageUrl, {
 			method: "POST"
 			// headers: { "Content-Type": "application/json" },
