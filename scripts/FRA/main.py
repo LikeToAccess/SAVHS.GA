@@ -12,8 +12,8 @@
 #==============================================================================
 import json
 import os
-import jmespath
 import shutil
+import jmespath
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
 from flask_cors import CORS
@@ -132,7 +132,7 @@ class Sample(Resource):
 def main():
 	api.add_resource(Quotes, "/quotes")
 	api.add_resource(Sample, "/sample")
-	serve(app, host="192.168.50.99", port=8080)
+	serve(app, host="192.168.50.99", port=8080, url_scheme="https")
 	# app.run()
 
 
