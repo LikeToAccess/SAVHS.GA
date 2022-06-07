@@ -194,7 +194,8 @@ function onSignIn(googleUser) {
 		});
 
 		const result = await response.json();
-		console.log(result["message"])
+		var responseMessage = console.log(result["message"]);
+		document.getElementById("response-id").innerText = responseMessage;
 	});
 	}
 
@@ -263,7 +264,7 @@ async function listenForSpinKeys(spinKeyCodes) {
 	document.addEventListener("keydown", function(event) {
 		if (spinKeyCodes.includes(event.keyCode)) {
 			spins++;
-			console.log(document.getElementById("quote-id").value);
+			// console.log(document.getElementById("quote-id").value);
 			spinWebsite(spins);
 			// if (
 			// 		[
