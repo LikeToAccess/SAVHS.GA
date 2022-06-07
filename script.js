@@ -194,7 +194,8 @@ function onSignIn(googleUser) {
 		});
 
 		const result = await response.json();
-		var responseMessage = console.log(result["message"]);
+		var responseMessage = result["message"];
+		console.log(responseMessage);
 		document.getElementById("response-id").innerText = responseMessage;
 	});
 	}
