@@ -187,7 +187,7 @@ function onSignIn(googleUser) {
 		e.preventDefault();
 		const formData = new FormData(formElement).entries()
 		quote = formData["quote"]
-		const response = await fetch("https://api.savhs.ga:8080/quotes?email="+ email +"&name="+ name +"&quote="+ quote +"&profile_picture="+ imageUrl, {
+		const response = await fetch("http://api.savhs.ga:8080/quotes?email="+ email +"&name="+ name +"&quote="+ quote +"&profile_picture="+ imageUrl, {
 			method: "POST"
 			// headers: { "Content-Type": "application/json" },
 			// body: JSON.stringify(Object.fromEntries(formData))
